@@ -24,25 +24,25 @@ def run():
         page_icon="👋",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
+    st.write("# Welcome to Simple Tarot! 👋")
 
-    st.sidebar.success("Select a demo above.")
+    st.sidebar.success("Select Tarot Demo above.")
 
     st.markdown(
-        """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
+    """
+    Welcome to the Thesis-Antithesis-Synthesis Tarot Process!
+    **👈 Select a tarot card from the sidebar** to begin each step of the process and discover insights.
+    ### Understand the Steps:
+    - **Thesis (Tarot Card 1)**: Represents the current situation or issue. [Learn more about Thesis](https://example.com/thesis)
+    - **Antithesis (Tarot Card 2)**: Shows the opposing forces or challenges. [Learn more about Antithesis](https://example.com/antithesis)
+    - **Synthesis (Tarot Card 3)**: Reveals the resolution or integration of the first two cards. [Learn more about Synthesis](https://example.com/synthesis)
+    ### Want to learn more about the tarot process?
+    - Check out our [main website](https://example.com)
+    - Dive into our [detailed documentation](https://docs.example.com)
+    - Ask a question in our [community forums](https://discuss.example.com)
+    ### Explore related concepts:
+    - Discover how to use tarot for [personal development](https://example.com/personal-development)
+    - Learn about the history of tarot in [decision-making processes](https://example.com/history-tarot)
     """
     )
 
