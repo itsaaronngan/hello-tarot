@@ -17,12 +17,18 @@ from openai import OpenAI
 import random
 import requests
 import json
+import time
+import datetime
+import pytz
 
 
 
 
 # Initialize your API key using Streamlit secrets
 openai_api_key = st.secrets["openai"]["api_key"]
+
+# Your Discord Webhook URL
+webhook_url = st.secrets["discord"]["webhook_url"]
 
 # Initialize the OpenAI client
 client = OpenAI(api_key=openai_api_key)
@@ -91,6 +97,32 @@ def generate_tarot_reading(tarot_draw, style, language, context):
     )
     return response.choices[0].message.content
 
+def split_messages(message, limit=1900):
+    """
+    Splits a message into chunks each of which is under the specified character limit.
+    """
+    # Ensure message is split at line breaks where possible within the limit
+    words = message.split('\n')
+    chunks = []
+    current_chunk = ""
+
+    for word in words:
+        # Check if adding the next word would exceed the limit
+        if len(current_chunk) + len(word) + 1 > limit:
+            chunks.append(current_chunk)
+            current_chunk = word
+        else:
+            if current_chunk:
+                # Ensure to add a newline back if there are multiple paragraphs
+                current_chunk += '\n'
+            current_chunk += word
+
+    # Don't forget to add the last chunk if there's any
+    if current_chunk:
+        chunks.append(current_chunk)
+    return chunks
+
+
 # Streamlit Layout
 st.title("Thesis Antithesis Synthesis Tarot Reading")
 
@@ -106,22 +138,33 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     tarot_draw = random.sample(tarot_cards, 3)
     # tarot_draw = 'King of Swords, Seven of Cups, Six of Pentacles'
 
+    st.markdown(f"""
+                # Your cards are {tarot_draw})
+                Generating reading now using {language} and in the style of {style}
+                this takes approx 20-40 seconds
+                """)
+
     # Generate tarot reading
     tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
 
     # Prepare the output text
-    output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nYour Tarot Cards:\n{tarot_reading}\n========End of Reading========\n"
-
-    # Your Discord Webhook URL
-    webhook_url = st.secrets["discord"]["webhook_url"]
+    output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nStyle: {style} Language: {language}\nYour Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
 
     # Send the output text to a Discord server
+    # Get the current time in Australia
+    australia_timezone = pytz.timezone('Australia/Sydney')
+    current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
+    
+    send_discord_message(webhook_url, f"A tarot draw has been created at {current_time}!")
     send_discord_message(webhook_url, output_text)
+
 
     # Display the results
     st.markdown(output_text)
 
-    output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nYour Tarot Cards:\n{tarot_reading}\n\n\n========End of Reading========\n"
-    # Write the results to a log file
-    with open("tarot_log.txt", "a") as f:
-        f.write(output_text)
+    # Split the message if it's too long
+    messages = split_messages(output_text)
+
+    # Send each part of the message to the Discord server
+    for msg in messages:
+        send_discord_message(webhook_url, msg)

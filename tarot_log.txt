@@ -63,3 +63,32 @@ This reading prompts you to move towards your goals with confidence. Assemble yo
 
 It's a reminder that life may offer hurdles, but also assures that you're endowed with the power to overcome and arrive at your desired destination.
 ========End of Reading========
+Context:  (Ace of Cups, Seven of Wands, Two of Cups)
+Model: GPT-4, Temperature: 1
+Your Tarot Cards:
+# Ace of Cups - The Beginning of Emotional Abundance
+
+**Thesis:** The Ace of Cups, often referred to as the beginning of emotional abundance, radiates an unwanted positivity. Its appearance suggests the influx of new emotional experiences, feelings, or relationships. The cup overflow represents your readiness and openness in receiving this abundance. This can be seen as the initiation or beginning of a fresh and emotionally satisfying phase in your life.
+
+In a real-world context, this could translate to entering into a new relationship, igniting a long-lost passion, or perhaps developing a newfound empathy and compassion toward yourself and others. You may feel a strong sense of emotional fulfillment and joy. This card encourages you to embrace positivity, nurture your relationships, and tap into your emotions, leading a more fulfilling and balanced life.
+
+# Seven of Wands - The Fight for Position 
+
+**Antithesis:** The Seven of Wands often symbolizes the fight for position. The bearer of this card is standing up for his beliefs, under intense competition or conflict. This card suggests that you may face challenges or opposition but also emphasizes the ability and need to stand your ground.
+
+Translating to real-life, you might be undergoing a period where you need to defend your position. Be it at work, where you have to stand up for your ideas or in relationships where you need to assert your stance, the situation can be daunting. There might be a constant push and pull or a sense of resistance. This card, however, encourages you to stand firm, asserting your identity and defending your beliefs, despite the resistance or opposition.
+
+# Two of Cups - Mutual Attraction
+
+**Synthesis:** The Two of Cups signifies mutual attraction, a connection, or partnership marked by harmony, balance, and mutual respect. It symbolizes unity, sharing, and exchange. It could refer to a romantic partnership, a close friendship, or even a business relationship. 
+
+In a real-world scenario, this card shows that you have or will establish a strong bond, a connection where both parties will enrich, understand and cherish each other. You may share thoughts, emotions, ideas, and vision, enhancing and deepening your relationship. This card strongly suggests the importance of communication in a relationship to establish mutual understanding and strong bonds.
+
+Drawing from these three cards -- the Ace of Cups, Seven of Wands, and the Two of Cups -- we can produce a meaningful reading. 
+
+Your life journey begins with an emotional spark, a new awakening leading you towards fulfilling experiences (Ace of Cups). However, as is the nature of life, challenges come along the way. There will be times you'll need to stand your ground, defend your beliefs, and fight resistance (Seven of Wands). Yet, despite the trials, you find balance, understanding, and a strong connection with someone who would stand by your side (Two of Cups). 
+
+This tarot reading encourages you to embrace new beginnings, appreciated abundant positive feelings, stay strong in the face of opposition, and cherish and foster strong connections. Remember, every challenge, every relationship, every emotion forms a beautiful mosaic of life, bringing you closer to finding yourself and discovering your path.
+
+
+========End of Reading========
