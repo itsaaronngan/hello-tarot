@@ -127,7 +127,7 @@ def split_messages(message, limit=1900):
 st.title("Thesis Antithesis Synthesis Tarot Reading")
 
 # User inputs
-context = st.text_input("Optional: provide some context for your reading if you prefer a more specific result", "")
+context = st.text_input("test Optional: provide some context for your reading if you prefer a more specific result", "")
 
 # Dropdown menu for selecting a tarot deck and language style
 style = st.selectbox("What deck, version, or school of tarot would you like to draw from:", tarot_decks)
