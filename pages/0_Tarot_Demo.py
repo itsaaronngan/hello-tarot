@@ -74,8 +74,8 @@ language = st.selectbox("What language do you want your reading in?:", language_
 
 if st.button("Draw Tarot Cards and Generate Reading"):
     # Picking 3 random cards
-    # tarot_draw = random.sample(tarot_cards, 3)
-    tarot_draw = 'King of Swords, Seven of Cups, Six of Pentacles'
+    tarot_draw = random.sample(tarot_cards, 3)
+    # tarot_draw = 'King of Swords, Seven of Cups, Six of Pentacles'
 
     # Generate tarot reading
     tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
