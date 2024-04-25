@@ -15,12 +15,28 @@
 import streamlit as st
 from openai import OpenAI
 import random
+import requests
+import json
+
+
+
 
 # Initialize your API key using Streamlit secrets
 openai_api_key = st.secrets["openai"]["api_key"]
 
 # Initialize the OpenAI client
 client = OpenAI(api_key=openai_api_key)
+
+# List of tarot decks
+tarot_decks = [
+    "Rider-Waite-Smith Tarot",
+    "Thoth Tarot",
+    "Marseille Tarot",
+    "Lenormand Tarot",
+    "Wild Unknown Tarot",
+    "Shadowscapes Tarot",
+    "Golden Dawn Tarot"
+]
 
 # List of English language styles
 language_styles = [
@@ -48,12 +64,23 @@ minor_arcana = [f"{rank} of {suit}" for suit in suits for rank in [
 ]]
 tarot_cards = major_arcana + minor_arcana
 
+def send_discord_message(webhook_url, message):
+    """
+    Sends a message to a Discord channel using a webhook.
+    """
+    data = {"content": message}
+    headers = {"Content-Type": "application/json"}
+    
+    response = requests.post(webhook_url, data=json.dumps(data), headers=headers)
+    if response.status_code != 204:
+        print(f"Failed to send message: {response.status_code}, {response.text}")
+
 # Function to generate a tarot reading
 def generate_tarot_reading(tarot_draw, style, language, context):
     gpt_model = "gpt-4"
     gpt_temperature = 1
     system_prompt = f"""
-    Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. Include a section for each category describing the interpretation from the perspective of {style}. When providing the headings for each section, include the card and include the common simple description or name of the card. Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 700 word reading and format this using Markdown formatting. Create a 700 word reading. Use {language} for your response. 
+    Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. Include a section for each category describing the interpretation from the perspective of {style}. When providing the headings for each section, include the card and include the common simple description or name of the card. Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 700 word reading and format this using Markdown formatting. Create a 700 word reading. Use casual conversational tone using the top 2000 words in common use. Use {language} for your response. 
     """
     response = client.chat.completions.create(
         model=gpt_model,
@@ -69,7 +96,9 @@ st.title("Thesis Antithesis Synthesis Tarot Reading")
 
 # User inputs
 context = st.text_input("Optional: provide some context for your reading if you prefer a more specific result", "")
-style = st.text_input("What deck, version, or school of tarot would you like to draw from:", "")
+
+# Dropdown menu for selecting a tarot deck and language style
+style = st.selectbox("What deck, version, or school of tarot would you like to draw from:", tarot_decks)
 language = st.selectbox("What language do you want your reading in?:", language_styles)
 
 if st.button("Draw Tarot Cards and Generate Reading"):
@@ -80,12 +109,17 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     # Generate tarot reading
     tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
 
+    # Prepare the output text
+    output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nYour Tarot Cards:\n{tarot_reading}\n========End of Reading========\n"
+
+    # Your Discord Webhook URL
+    webhook_url = st.secrets["discord"]["webhook_url"]
+
+    # Send the output text to a Discord server
+    send_discord_message(webhook_url, output_text)
+
     # Display the results
-    st.text(f"Context: {context} ({', '.join(tarot_draw)})")
-    st.text(f"Model: GPT-4, Temperature: 1")
-    st.subheader("Your Tarot Cards:")
-    st.markdown(tarot_reading)
-    st.text("========End of Reading========")
+    st.markdown(output_text)
 
     output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nYour Tarot Cards:\n{tarot_reading}\n========End of Reading========\n"
     # Write the results to a log file
