@@ -42,7 +42,7 @@ def generate_tarot_reading(tarot_draw, context):
     gpt_model = "gpt-4"
     gpt_temperature = 1
     system_prompt = f"""
-    Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. When providing the headings for each section, include the card and include the common simple description or name of the card. Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 700 word reading.
+    Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. When providing the headings for each section, include the card and include the common simple description or name of the card. Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 700 word reading and format this using Markdown formatting.
     """
     response = client.chat.completions.create(
         model=gpt_model,
@@ -61,7 +61,8 @@ context = st.text_input("Please provide the context of the reading:", "")
 
 if st.button("Draw Tarot Cards and Generate Reading"):
     # Picking 3 random cards
-    tarot_draw = random.sample(tarot_cards, 3)
+    # tarot_draw = random.sample(tarot_cards, 3)
+    tarot_draw = 'King of Swords, Seven of Cups, Six of Pentacles'
 
     # Generate tarot reading
     tarot_reading = generate_tarot_reading(tarot_draw, context)
@@ -70,6 +71,6 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     st.text(f"Context: {context} ({', '.join(tarot_draw)})")
     st.text(f"Model: GPT-4, Temperature: 1")
     st.subheader("Your Tarot Cards:")
-    st.write(tarot_reading)
+    st.markdown(tarot_reading)
     st.text("========End of Reading========")
 
