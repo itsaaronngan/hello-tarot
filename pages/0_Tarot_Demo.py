@@ -121,7 +121,7 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     # Display the results
     st.markdown(output_text)
 
-    output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nYour Tarot Cards:\n{tarot_reading}\n========End of Reading========\n"
+    output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nYour Tarot Cards:\n{tarot_reading}\n\n\n========End of Reading========\n"
     # Write the results to a log file
     with open("tarot_log.txt", "a") as f:
         f.write(output_text)
