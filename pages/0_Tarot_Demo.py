@@ -42,7 +42,7 @@ def generate_tarot_reading(tarot_draw, context):
     gpt_model = "gpt-4"
     gpt_temperature = 1
     system_prompt = f"""
-    Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 700 word reading.
+    Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. When providing the headings for each section, include the card and include the common simple description or name of the card. Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 700 word reading.
     """
     response = client.chat.completions.create(
         model=gpt_model,
