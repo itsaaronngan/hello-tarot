@@ -22,6 +22,17 @@ openai_api_key = st.secrets["openai"]["api_key"]
 # Initialize the OpenAI client
 client = OpenAI(api_key=openai_api_key)
 
+# List of English language styles
+language_styles = [
+    "Standard American English (SAE)", "British English", "Australian English", 
+    "African American Vernacular English (AAVE)", "Indian English", 
+    "Singaporean English (Singlish)", "Caribbean English", "Canadian English", 
+    "Spanglish", "International English", "Semantic Activism", "Plain English", 
+    "Gender-neutral English", "Easy Read English", "Legalese-Free English", 
+    "Youth Slang", "Non-native Speaker English", "Culturally Specific English", 
+    "Elder Speak", "Technical English"
+]
+
 # Tarot Cards Definitions
 major_arcana = [
     "The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor",
@@ -38,11 +49,11 @@ minor_arcana = [f"{rank} of {suit}" for suit in suits for rank in [
 tarot_cards = major_arcana + minor_arcana
 
 # Function to generate a tarot reading
-def generate_tarot_reading(tarot_draw, context):
+def generate_tarot_reading(tarot_draw, style, language, context):
     gpt_model = "gpt-4"
     gpt_temperature = 1
     system_prompt = f"""
-    Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. When providing the headings for each section, include the card and include the common simple description or name of the card. Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 700 word reading and format this using Markdown formatting.
+    Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. Include a section for each category describing the interpretation from the perspective of {style}. When providing the headings for each section, include the card and include the common simple description or name of the card. Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 700 word reading and format this using Markdown formatting. Create a 700 word reading. Use {language} for your response. 
     """
     response = client.chat.completions.create(
         model=gpt_model,
@@ -54,10 +65,12 @@ def generate_tarot_reading(tarot_draw, context):
     return response.choices[0].message.content
 
 # Streamlit Layout
-st.title("Thesis Antithesis Synthesis Tarot Reading App")
+st.title("Thesis Antithesis Synthesis Tarot Reading")
 
 # User inputs
-context = st.text_input("Please provide the context of the reading:", "")
+context = st.text_input("Optional: provide some context for your reading if you prefer a more specific result", "")
+style = st.text_input("What deck, version, or school of tarot would you like to draw from:", "")
+language = st.selectbox("What language do you want your reading in?:", language_styles)
 
 if st.button("Draw Tarot Cards and Generate Reading"):
     # Picking 3 random cards
@@ -65,7 +78,7 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     tarot_draw = 'King of Swords, Seven of Cups, Six of Pentacles'
 
     # Generate tarot reading
-    tarot_reading = generate_tarot_reading(tarot_draw, context)
+    tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
 
     # Display the results
     st.text(f"Context: {context} ({', '.join(tarot_draw)})")
@@ -74,3 +87,7 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     st.markdown(tarot_reading)
     st.text("========End of Reading========")
 
+    output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nYour Tarot Cards:\n{tarot_reading}\n========End of Reading========\n"
+    # Write the results to a log file
+    with open("tarot_log.txt", "a") as f:
+        f.write(output_text)
