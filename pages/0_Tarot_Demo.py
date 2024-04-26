@@ -47,13 +47,13 @@ tarot_decks = [
 
 # List of English language styles
 language_styles = [
-    "Standard American English (SAE)", "British English", "Australian English", 
+    "UK English", "Aussie Slang English", 
     "African American Vernacular English (AAVE)", "Indian English", 
     "Singaporean English (Singlish)", "Caribbean English", "Canadian English", 
     "Spanglish", "International English", "Semantic Activism", "Plain English", 
     "Gender-neutral English", "Easy Read English", "Legalese-Free English", 
-    "Youth Slang", "Non-native Speaker English", "Culturally Specific English", 
-    "Elder Speak", "Technical English"
+    "TikTok Youth Slang", "Non-native Speaker English", "Culturally Specific English", 
+    "Elder Speak", "Technical English", "Pirate English", "Text Speak", "Shakespearean English",
 ]
 
 # Tarot Cards Definitions
