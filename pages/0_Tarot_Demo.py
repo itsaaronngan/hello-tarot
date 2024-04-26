@@ -20,7 +20,7 @@ import json
 import time
 import datetime
 import pytz
-
+from threading import Thread
 
 
 
@@ -33,6 +33,7 @@ webhook_url = st.secrets["discord"]["webhook_url"]
 # Initialize the OpenAI client
 client = OpenAI(api_key=openai_api_key)
 
+results = {}
 # List of tarot decks
 tarot_decks = [
     "Rider-Waite-Smith Tarot",
@@ -85,8 +86,36 @@ def send_discord_message(webhook_url, message):
 def generate_tarot_reading(tarot_draw, style, language, context):
     gpt_model = "gpt-4"
     gpt_temperature = 1
+    australia_timezone = pytz.timezone('Australia/Sydney')
+    current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
+    send_discord_message(webhook_url, f"A tarot draw started at {current_time}!\n{tarot_draw}, {style}, {language} {gpt_model}, Temp: {gpt_temperature}")
+    
     system_prompt = f"""
-    Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. Include a section for each category describing the interpretation from the perspective of {style}. When providing the headings for each section, include the card and include the common simple description or name of the card. Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 700 word reading and format this using Markdown formatting. Create a 700 word reading. Use casual conversational tone using the top 2000 words in common use. Use {language} for your response. 
+    Instructions: Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. 
+    
+    for each of 'thesis, antithesis, synthesis', include one paragraph that speaks to insights from the {style} tarot style and interpretation corpus. 
+    
+    Use a Level 1 "#" heading for each card e.g. "Thesis - [Card Name] - [card simple description]" for the card simple description common simple description or commonly referred to name of the card e.g. "the card of abundunce" "the Cornucopia card" that is relevant to that specific card. 
+    
+    For the overall reading, interpret how these cards interact in the context of real life challenges and opportunities. Any time specific significant challenges are mentioned provide a short reassurance affirming that the reader has what they need.
+    
+    Response Style, formatting, and Length:
+    Give me a 700 word reading. Use Markdown formatting. 
+    Use {language} for the reading.
+    Use casual conversational tone using the 2000 words in common use. 
+
+    Sample Structure:
+    # Thesis - [Card Name] - [card expressive name]
+    [Thesis interpretation]
+    [Thesis {style} interpretation paragraph]
+    # Antithesis - [Card Name] - [card Expressive name]
+    [Antithesis interpretation]
+    [Antithesis {style} interpretation paragraph]
+    # Synthesis - [Card Name] - [card expressive name]
+    [Synthesis interpretation]
+    [Synthesis {style} interpretation paragraph]
+    # Conclusion
+    [Overall reading interpretation ensuring application to real life challenges and mentioning the individual cards chosen {tarot_draw} and their place in the Thesis, Antithesis, synthesis structure.]
     """
     response = client.chat.completions.create(
         model=gpt_model,
@@ -96,6 +125,13 @@ def generate_tarot_reading(tarot_draw, style, language, context):
         ],
     )
     return response.choices[0].message.content
+
+def progress_bar_animation(duration=20):
+    progress_bar = st.progress(0)
+    for percent_complete in range(100):
+        time.sleep(duration / 100)
+        progress_bar.progress(percent_complete + 1)
+    st.success("Process completed!")
 
 def split_messages(message, limit=1900):
     """
@@ -124,10 +160,10 @@ def split_messages(message, limit=1900):
 
 
 # Streamlit Layout
-st.title("Thesis Antithesis Synthesis Tarot Reading")
+st.title("Thesis Antithesis Synthesis Tarot Reading v.1")
 
 # User inputs
-context = st.text_input("test Optional: provide some context for your reading if you prefer a more specific result", "")
+context = st.text_input("Optional: provide some context for your reading if you prefer a more specific result", "")
 
 # Dropdown menu for selecting a tarot deck and language style
 style = st.selectbox("What deck, version, or school of tarot would you like to draw from:", tarot_decks)
@@ -140,13 +176,20 @@ if st.button("Draw Tarot Cards and Generate Reading"):
 
     st.markdown(f"""
                 # Your cards are {tarot_draw})
-                Generating reading now using {language} and in the style of {style}
+                
+                Your reading is being generated.
+
                 this takes approx 20-40 seconds
+                
+                Language: {language} and in the style of {style}
+                                
                 """)
 
-    # Generate tarot reading
-    tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
 
+    # Generate tarot reading
+    # progress_bar_animation()
+    tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
+   
     # Prepare the output text
     output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nStyle: {style} Language: {language}\nYour Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
 
@@ -155,7 +198,6 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     australia_timezone = pytz.timezone('Australia/Sydney')
     current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
     
-    send_discord_message(webhook_url, f"A tarot draw has been created at {current_time}!")
     send_discord_message(webhook_url, output_text)
 
 

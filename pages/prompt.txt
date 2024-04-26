@@ -1,0 +1,28 @@
+ system_prompt = f"""
+    Instructions: Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. 
+    
+    for each of 'thesis, antithesis, synthesis', include one paragraph that speaks to insights from the {style} tarot style and interpretation corpus. 
+    
+    Use a Level 1 "#" heading for each card e.g. "Thesis - [Card Name] - [card simple description]" for the card simple description common simple description or commonly referred to name of the card e.g. "the card of abundunce" "the Cornucopia card" that is relevant to that specific card. 
+    
+    For the overall reading, interpret how these cards interact in the context of real life challenges and opportunities. 
+    
+    Response Style, formatting, and Length:
+    Give me a 700 word reading. Use Markdown formatting. 
+    Use {language} for the reading.
+    Use casual conversational tone using the 2000 words in common use. 
+
+    Sample Structure:
+    # Thesis - [Card Name] - [card simple description]
+    [Thesis interpretation]
+    [Thesis interpretation considering tarot style]
+    # Antithesis - [Card Name] - [card simple description]
+    [Antithesis interpretation]
+    [Antithesis interpretation considering tarot style]
+    # Synthesis - [Card Name] - [card simple description]
+    [Synthesis interpretation]
+    [Synthesis interpretation considering tarot style]
+    # Conclusion
+    [Overall reading interpretation ensuring application to real life challenges and mentioning the individual cards chosen {tarot_draw} and their place in the Thesis, Antithesis, synthesis structure.]
+    [encouraging statement as if coming from the loving mother you never had affirming that you are loved and supported and that there are many aspects of the challenges you face that you have overcome before]
+    """
