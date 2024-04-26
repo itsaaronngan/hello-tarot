@@ -95,7 +95,7 @@ def generate_tarot_reading(tarot_draw, style, language, context):
     
     for each of 'thesis, antithesis, synthesis', include one paragraph that speaks to insights from the {style} tarot style and interpretation corpus. 
     
-    Use a Level 1 "#" heading for each card e.g. "Thesis - [Card Name] - [card simple description]" for the card simple description common simple description or commonly referred to name of the card e.g. "the card of abundunce" "the Cornucopia card" that is relevant to that specific card. 
+    Use a Level 1 "#" heading for each card e.g. "Thesis - [Card Name] - [card expressive name]" for the expressive name draw from common descriptions or commonly referred to names of the card e.g. "the card of abundunce" "the Cornucopia card" that is relevant to that specific card. 
     
     For the overall reading, interpret how these cards interact in the context of real life challenges and opportunities. Any time specific significant challenges are mentioned provide a short reassurance affirming that the reader has what they need.
     
