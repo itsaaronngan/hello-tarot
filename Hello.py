@@ -13,10 +13,6 @@
 # limitations under the License.
 
 import streamlit as st
-from streamlit.logger import get_logger
-
-LOGGER = get_logger(__name__)
-
 
 def run():
     st.set_page_config(
@@ -25,24 +21,24 @@ def run():
     )
 
     st.write("# Welcome to Simple Tarot! 👋")
+    st.page_link("pages/0_Tarot_Demo.py", label="Go directly to Tarot Demo", icon="🏠")
 
     st.sidebar.success("Select Tarot Demo above.")
 
     st.markdown(
     """
     Welcome to the Thesis-Antithesis-Synthesis Tarot Process!
-    **👈 Select a tarot card from the sidebar** to begin each step of the process and discover insights.
+    **👈 Select a "Tarot Demo" from the sidebar** to begin each step of the process and discover insights.
     ### Understand the Steps:
-    - **Thesis (Tarot Card 1)**: Represents the current situation or issue. [Learn more about Thesis](https://example.com/thesis)
-    - **Antithesis (Tarot Card 2)**: Shows the opposing forces or challenges. [Learn more about Antithesis](https://example.com/antithesis)
-    - **Synthesis (Tarot Card 3)**: Reveals the resolution or integration of the first two cards. [Learn more about Synthesis](https://example.com/synthesis)
-    ### Want to learn more about the tarot process?
-    - Check out our [main website](https://example.com)
-    - Dive into our [detailed documentation](https://docs.example.com)
-    - Ask a question in our [community forums](https://discuss.example.com)
-    ### Explore related concepts:
-    - Discover how to use tarot for [personal development](https://example.com/personal-development)
-    - Learn about the history of tarot in [decision-making processes](https://example.com/history-tarot)
+    - **Thesis (Tarot Card 1)**: Represents the current situation or issue. 
+    - **Antithesis (Tarot Card 2)**: Shows the opposing forces or challenges.
+    - **Synthesis (Tarot Card 3)**: Reveals the resolution or integration of the first two cards.
+
+    This is a simple tarot reading process that can help you gain insights and clarity on any situation or question.
+
+    This app is under development and will be updated with more features and improvements. Stay tuned for more updates! 🚀
+
+    This app uses GPT-4 from OpenAI to generate tarot card interpretations. 
     """
     )
 
