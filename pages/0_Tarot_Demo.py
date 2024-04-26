@@ -26,6 +26,7 @@ from threading import Thread
 
 # Initialize your API key using Streamlit secrets
 openai_api_key = st.secrets["openai"]["api_key"]
+version = 0.2
 
 # Your Discord Webhook URL
 webhook_url = st.secrets["discord"]["webhook_url"]
@@ -160,7 +161,7 @@ def split_messages(message, limit=1900):
 
 
 # Streamlit Layout
-st.title("Thesis Antithesis Synthesis Tarot Reading v.1")
+st.title(f"Thesis Antithesis Synthesis Tarot Reading v{version}")
 
 # User inputs
 context = st.text_input("Optional: provide some context for your reading if you prefer a more specific result", "")
@@ -191,7 +192,7 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
    
     # Prepare the output text
-    output_text = f"Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nStyle: {style} Language: {language}\nYour Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
+    output_text = f"Version {version}, Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nStyle: {style} Language: {language}\nYour Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
 
     # Send the output text to a Discord server
     # Get the current time in Australia
