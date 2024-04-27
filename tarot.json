@@ -107,7 +107,7 @@
             "name": "The Emperor",
             "rank": 4,
             "suit": "major",
-            "planet": "mars",
+            "planet": "Mars",
             "element": "fire",
             "sign": ["aries"],
             "meanings": {
@@ -427,7 +427,7 @@
             "name": "The Tower",
             "rank": 16,
             "suit": "major",
-            "planet": "mars",
+            "planet": "Mars",
             "element": "fire",
             "sign": [],
             "meanings": {
