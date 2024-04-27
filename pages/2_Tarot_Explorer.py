@@ -31,38 +31,27 @@ st.title('Tarot Card Explorer')
 st.sidebar.title("Navigation")
 options = st.sidebar.selectbox("Choose an option", ["View All Cards", "View Cards by Suit", "View Suits", "Draw Cards", "Find Card by Name"])
 
+# Replace st.json(cards) with:
 if options == "View All Cards":
-    st.json(cards)
+    for card in cards:
+        st.markdown(f"**Name:** {card['name']}\n\n**Suit:** {card['suit']}\n\n**Description:** {card['description']}\n\n---\n")
 
+# Replace st.json(filtered_cards) with:
 elif options == "View Cards by Suit":
-    selected_suit = st.sidebar.selectbox("Select a Suit", [suit['name'] for suit in suits])
-    filtered_cards = [card for card in cards if card['suit'].lower() == selected_suit.lower()]
-    if filtered_cards:
-        st.json(filtered_cards)
-    else:
-        st.error("No cards found for this suit!")
+    for card in filtered_cards:
+        st.markdown(f"**Name:** {card['name']}\n\n**Suit:** {card['suit']}\n\n**Description:** {card['description']}\n\n---\n")
 
+# Replace st.json(suits) with:
 elif options == "View Suits":
-    st.json(suits)
+    for suit in suits:
+        st.markdown(f"**Name:** {suit['name']}\n\n**Element:** {suit['element']}\n\n**Description:** {suit['description']}\n\n---\n")
 
+# Replace st.json(drawn_cards) with:
 elif options == "Draw Cards":
-    n = st.sidebar.number_input("Enter number of cards to draw", min_value=0, value=1)
-    if n > 0:
-        drawn_cards = random.sample(cards, min(n, len(cards)))
-        st.json(drawn_cards)
+    for card in drawn_cards:
+        st.markdown(f"**Name:** {card['name']}\n\n**Suit:** {card['suit']}\n\n**Description:** {card['description']}\n\n---\n")
 
+# Replace st.json(matching_card) with:
 elif options == "Find Card by Name":
-    name_query = st.sidebar.text_input("Enter the card name")
-    replacements = {
-        "2": "two", "3": "three", "4": "four", "5": "five",
-        "6": "six", "7": "seven", "8": "eight", "9": "nine",
-        "10": "ten", "1": "ace"
-    }
-    for digit, word in replacements.items():
-        name_query = name_query.replace(digit, word)
-
-    matching_card = next((card for card in cards if card['name'].lower() == name_query.lower()), None)
     if matching_card:
-        st.json(matching_card)
-    else:
-        st.error("Card not found!")
+        st.markdown(f"**Name:** {matching_card['name']}\n\n**Suit:** {matching_card['suit']}\n\n**Description:** {matching_card['description']}\n\n---\n")
