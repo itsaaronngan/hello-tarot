@@ -75,9 +75,6 @@ elif options == "View Cards by Suit":
     else:
         st.error("No cards found for this suit!")
 
-elif options == "View Suits":
-    st.json(suits)
-
 elif options == "Draw Cards":
     n = st.sidebar.number_input("Enter number of cards to draw", min_value=0, value=1)
     if n > 0:
