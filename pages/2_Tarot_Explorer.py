@@ -60,7 +60,7 @@ st.title('Tarot Card Explorer')
 
 # Navigation
 st.sidebar.title("Navigation")
-options = st.sidebar.selectbox("Choose an option", ["View All Cards", "View Cards by Suit", "View Suits", "Draw Cards", "Find Card by Name"])
+options = st.sidebar.selectbox("Choose an option", ["View All Cards", "View Cards by Suit", "Draw Cards", "Find Card by Name"])
 
 if options == "View All Cards":
     for card in cards:
@@ -76,7 +76,7 @@ elif options == "View Cards by Suit":
         st.error("No cards found for this suit!")
 
 elif options == "Draw Cards":
-    n = st.sidebar.number_input("Enter number of cards to draw", min_value=0, value=1)
+    n = st.sidebar.number_input("Enter number of cards to draw", min_value=0, value=3)
     if n > 0:
         drawn_cards = random.sample(cards, min(n, len(cards)))
         for card in drawn_cards:
