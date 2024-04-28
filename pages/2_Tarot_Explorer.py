@@ -46,10 +46,14 @@ def find_card_by_name(name):
     return None
 
 def format_card(card):
-    description = f"**Planet:** {card.get('planet', 'N/A')}, **Element:** {card.get('element', 'N/A')}, **Sign:** {', '.join(card.get('sign', []))}\n\n**Upright Meanings:** {', '.join(card['meanings'].get('upright', []))}\n\n**Reversed Meanings:** {', '.join(card['meanings'].get('reversed', []))}\n\n**Simple Name:** {card.get('simplename', 'N/A')}\n\n**Alternate Simple Name:** {card.get('altsimplename', 'N/A')}"
+    description = f"\n**Planet:** {card.get('planet', 'N/A')}, **Element:** {card.get('element', 'N/A')}, **Sign:** {', '.join(card.get('sign', []))}\n\n**Meanings:** {', '.join(card['meanings'].get('upright', []))}\n"
 #    image_path = "/workspaces/hello-tarot/Cards/" + card.get("img")  # Fix: Replace "&" with "+"
 #    st.image(image_path, use_column_width=True)
-    return f"**Name:** {card.get('name', 'N/A')}\n**Suit:** {card.get('suit', 'N/A')}\n\n{description}\n\n---\n"
+    return f"""## Name: {card.get('name', 'N/A')}
+### The Card of {card.get('simplename', 'N/A')} or {card.get('altsimplename', 'N/A')}
+    {description}
+--------------
+    """
 
 # Streamlit UI
 st.set_page_config(
