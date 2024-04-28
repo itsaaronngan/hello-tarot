@@ -1,0 +1,2563 @@
+{
+    "description": "Tarot cards and their meanings.",
+    "cards": [
+        {
+            "name": "The Fool",
+            "rank": 0,
+            "suit": "major",
+            "planet": "uranus",
+            "element": "air",
+            "sign": [],
+            "meanings": {
+                "upright": [
+                    "new beginnings",
+                    "innocence",
+                    "beginner's luck",
+                    "improvisation",
+                    "inexperience"
+                ],
+                "reversed": [
+                    "recklessness",
+                    "taken advantage of",
+                    "inconsideration",
+                    "naivety",
+                    "lack of direction",
+                    "chaos"
+                ]
+            },
+            "img": "cards/m00.jpg",
+            "simplename": "Beginnings",
+            "altsimplename": "Spontaneity"
+        },
+        {
+            "name": "The Magician",
+            "rank": 1,
+            "suit": "major",
+            "planet": "mercury",
+            "element": "air",
+            "sign": [],
+            "meanings": {
+                "upright": [
+                    "determined",
+                    "skillfulness",
+                    "resourceful",
+                    "confidence",
+                    "potential",
+                    "transformation"
+                ],
+                "reversed": [
+                    "trickery",
+                    "deception",
+                    "illusions",
+                    "out of touch",
+                    "manipulative",
+                    "poor planning",
+                    "confusion"
+                ]
+            },
+            "img": "cards/m01.jpg",
+            "simplename": "Power",
+            "altsimplename": "Manifestation"
+        },
+        {
+            "name": "The High Priestess",
+            "rank": 2,
+            "suit": "major",
+            "planet": "moon",
+            "element": "water",
+            "sign": [],
+            "meanings": {
+                "upright": [
+                    "intuitive",
+                    "unconscious",
+                    "inner voice",
+                    "spirituality",
+                    "mystery",
+                    "divine feminine"
+                ],
+                "reversed": [
+                    "secrets",
+                    "mystery",
+                    "lack of understanding",
+                    "selfishness",
+                    "hidden agendas"
+                ]
+            },
+            "img": "cards/m02.jpg",
+            "simplename": "Mystery",
+            "altsimplename": "Intuition"
+        },
+        {
+            "name": "The Empress",
+            "rank": 3,
+            "suit": "major",
+            "planet": "venus",
+            "element": "earth",
+            "sign": [],
+            "meanings": {
+                "upright": [
+                    "motherly",
+                    "fertility",
+                    "nature",
+                    "beauty",
+                    "abundance",
+                    "compassion"
+                ],
+                "reversed": [
+                    "dependence",
+                    "smothering",
+                    "neglectful",
+                    "unhealthy relationships",
+                    "creative block"
+                ]
+            },
+            "img": "cards/m03.jpg",
+            "simplename": "Fertility",
+            "altsimplename": "Abundance"
+        },
+        {
+            "name": "The Emperor",
+            "rank": 4,
+            "suit": "major",
+            "planet": "Mars",
+            "element": "fire",
+            "sign": [
+                "aries"
+            ],
+            "meanings": {
+                "upright": [
+                    "leadership",
+                    "promotion",
+                    "structure",
+                    "law and order"
+                ],
+                "reversed": [
+                    "tyranny",
+                    "rigidity",
+                    "coldness",
+                    "abuse of power",
+                    "loss of control"
+                ]
+            },
+            "img": "cards/m04.jpg",
+            "simplename": "Authority",
+            "altsimplename": "Structure"
+        },
+        {
+            "name": "The Hierophant",
+            "rank": 5,
+            "suit": "major",
+            "planet": "venus",
+            "element": "earth",
+            "sign": [
+                "taurus"
+            ],
+            "meanings": {
+                "upright": [
+                    "tradition",
+                    "conformity",
+                    "morality",
+                    "ethics",
+                    "marriage"
+                ],
+                "reversed": [
+                    "rebellion",
+                    "subversiveness",
+                    "new approaches",
+                    "freethinking"
+                ]
+            },
+            "img": "cards/m05.jpg",
+            "simplename": "Tradition",
+            "altsimplename": "Conformity"
+        },
+        {
+            "name": "The Lovers",
+            "rank": 6,
+            "suit": "major",
+            "planet": "mercury",
+            "element": "air",
+            "sign": [
+                "gemini"
+            ],
+            "meanings": {
+                "upright": [
+                    "partnerships",
+                    "duality",
+                    "union",
+                    "choices",
+                    "romance",
+                    "sexuality"
+                ],
+                "reversed": [
+                    "infidelity",
+                    "separation",
+                    "loss of balance",
+                    "one-sidedness",
+                    "disharmony",
+                    "misalignment of values"
+                ]
+            },
+            "img": "cards/m06.jpg",
+            "simplename": "Relationships",
+            "altsimplename": "Choices"
+        },
+        {
+            "name": "The Charriot",
+            "rank": 7,
+            "suit": "major",
+            "planet": "moon",
+            "element": "water",
+            "sign": [
+                "cancer"
+            ],
+            "meanings": {
+                "upright": [
+                    "control",
+                    "will power",
+                    "victory",
+                    "assertion",
+                    "determination",
+                    "journey",
+                    "drive"
+                ],
+                "reversed": [
+                    "travel issues",
+                    "lack of control and direction",
+                    "aggression",
+                    "lack of willpower",
+                    "distraction",
+                    "lack of direction",
+                    "failure"
+                ]
+            }
+        },
+        {
+            "name": "Strength",
+            "rank": 8,
+            "suit": "major",
+            "planet": "sun",
+            "element": "fire",
+            "sign": [
+                "leo"
+            ],
+            "meanings": {
+                "upright": [
+                    "courage",
+                    "compassion",
+                    "self-control",
+                    "sacrifice",
+                    "patience"
+                ],
+                "reversed": [
+                    "selfishness",
+                    "weakness",
+                    "self-doubt",
+                    "lack of self-discipline",
+                    "dishonor"
+                ]
+            },
+            "img": "cards/m08.jpg",
+            "simplename": "Courage",
+            "altsimplename": "Influence"
+        },
+        {
+            "name": "The Hermit",
+            "rank": 9,
+            "suit": "major",
+            "planet": "mercury",
+            "element": "earth",
+            "sign": [
+                "virgo"
+            ],
+            "meanings": {
+                "upright": [
+                    "contemplation",
+                    "searching",
+                    "soul-searching",
+                    "introspection",
+                    "being alone",
+                    "inner guidance"
+                ],
+                "reversed": [
+                    "isolation",
+                    "loneliness",
+                    "withdrawal",
+                    "lost your way",
+                    "misguidance"
+                ]
+            },
+            "img": "cards/m09.jpg",
+            "simplename": "Solitude",
+            "altsimplename": "Reflection"
+        },
+        {
+            "name": "Wheel of Fortune",
+            "rank": 10,
+            "suit": "major",
+            "planet": "jupiter",
+            "element": "fire",
+            "sign": [],
+            "meanings": {
+                "upright": [
+                    "change",
+                    "cycles",
+                    "inevitable fate",
+                    "turning point",
+                    "luck",
+                    "destiny",
+                    "chance"
+                ],
+                "reversed": [
+                    "no control",
+                    "clinging to control",
+                    "bad luck",
+                    "interruption",
+                    "unexpected events",
+                    "disappointment"
+                ]
+            },
+            "img": "cards/m10.jpg",
+            "simplename": "Fate",
+            "altsimplename": "Cycles"
+        },
+        {
+            "name": "Justice",
+            "rank": 11,
+            "suit": "major",
+            "planet": "venus",
+            "element": "earth",
+            "sign": [
+                "libra"
+            ],
+            "meanings": {
+                "upright": [
+                    "justice",
+                    "responsibility",
+                    "decisions",
+                    "cause and effect",
+                    "equity",
+                    "truth"
+                ],
+                "reversed": [
+                    "unfairness",
+                    "lack of accountability",
+                    "dishonesty",
+                    "unaccountability",
+                    "unintentional error",
+                    "bias"
+                ]
+            },
+            "img": "cards/m11.jpg",
+            "simplename": "Fairness",
+            "altsimplename": "Truth"
+        },
+        {
+            "name": "The Hanged Man",
+            "rank": 12,
+            "suit": "major",
+            "planet": "neptune",
+            "element": "water",
+            "sign": [
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "sacrifice",
+                    "release",
+                    "martyrdom",
+                    "surrendering",
+                    "letting go",
+                    "metamorphosis"
+                ],
+                "reversed": [
+                    "stalling",
+                    "needless sacrifice",
+                    "fear of sacrifice",
+                    "fear of change",
+                    "immobilization",
+                    "blockage",
+                    "hesitation in decision making",
+                    "egotism"
+                ]
+            },
+            "img": "cards/m12.jpg",
+            "simplename": "Sacrifice",
+            "altsimplename": "Letting Go"
+        },
+        {
+            "name": "Death",
+            "rank": 13,
+            "suit": "major",
+            "planet": "pluto",
+            "element": "water",
+            "sign": [
+                "scorpio"
+            ],
+            "meanings": {
+                "upright": [
+                    "rebirth",
+                    "endings",
+                    "change",
+                    "transformation",
+                    "transition",
+                    "letting go",
+                    "walking away from something",
+                    "cyclicality",
+                    "new beginnings"
+                ],
+                "reversed": [
+                    "resistance to change",
+                    "personal transformation",
+                    "inner purging",
+                    "fear of change",
+                    "stagnation",
+                    "decay",
+                    "depression"
+                ]
+            },
+            "img": "cards/m13.jpg",
+            "simplename": "Transformation",
+            "altsimplename": "Ending"
+        },
+        {
+            "name": "Temperance",
+            "rank": 14,
+            "suit": "major",
+            "planet": "jupiter",
+            "element": "fire",
+            "sign": [
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "balance",
+                    "moderation",
+                    "patience",
+                    "purpose",
+                    "meaning",
+                    "combinations",
+                    "harmony",
+                    "alchemy"
+                ],
+                "reversed": [
+                    "imbalance",
+                    "excess",
+                    "self-healing",
+                    "re-alignment",
+                    "extremes",
+                    "disruption",
+                    "chaos"
+                ]
+            },
+            "img": "cards/m14.jpg",
+            "simplename": "Balance",
+            "altsimplename": "Moderation"
+        },
+        {
+            "name": "The Devil",
+            "rank": 15,
+            "suit": "major",
+            "planet": "saturn",
+            "element": "earth",
+            "sign": [
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "excess",
+                    "greed",
+                    "shadow self",
+                    "attachment",
+                    "addiction",
+                    "restriction",
+                    "sexuality",
+                    "fear",
+                    "materialism"
+                ],
+                "reversed": [
+                    "release",
+                    "enlightenment",
+                    "acceptance",
+                    "inspiration",
+                    "freedom",
+                    "divorce",
+                    "determination",
+                    "restoring control"
+                ]
+            },
+            "img": "cards/m15.jpg",
+            "simplename": "Bondage",
+            "altsimplename": "Materialism"
+        },
+        {
+            "name": "The Tower",
+            "rank": 16,
+            "suit": "major",
+            "planet": "Mars",
+            "element": "fire",
+            "sign": [],
+            "meanings": {
+                "upright": [
+                    "sudden change",
+                    "upheaval",
+                    "disaster",
+                    "overthrow of existing circumstances",
+                    "destruction",
+                    "ruin",
+                    "revelation"
+                ],
+                "reversed": [
+                    "avoidance of disaster",
+                    "fear of suffering",
+                    "manipulation",
+                    "trapped in suffering",
+                    "loss",
+                    "illness"
+                ]
+            },
+            "img": "cards/m16.jpg",
+            "simplename": "Disaster",
+            "altsimplename": "Upheaval"
+        },
+        {
+            "name": "The Star",
+            "rank": 17,
+            "suit": "major",
+            "planet": "uranus",
+            "element": "air",
+            "sign": [
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "hope",
+                    "faith",
+                    "rejuvenation",
+                    "serenity",
+                    "inspiration",
+                    "calm",
+                    "optimism",
+                    "rebirth"
+                ],
+                "reversed": [
+                    "faithlessness",
+                    "discouragement",
+                    "insecurity",
+                    "hopelessness",
+                    "disconnection",
+                    "unrealistic expectations"
+                ]
+            },
+            "img": "cards/m17.jpg",
+            "simplename": "Hope",
+            "altsimplename": "Inspiration"
+        },
+        {
+            "name": "The Moon",
+            "rank": 18,
+            "suit": "major",
+            "planet": "neptune",
+            "element": "water",
+            "sign": [
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "unconscious",
+                    "illusions",
+                    "intuition",
+                    "dreams",
+                    "fantasy",
+                    "fears",
+                    "mystery"
+                ],
+                "reversed": [
+                    "confusion",
+                    "fear",
+                    "misinterpretation",
+                    "deception",
+                    "anxiety",
+                    "unfounded fear",
+                    "enlightenment"
+                ]
+            },
+            "img": "cards/m18.jpg",
+            "simplename": "Illusion",
+            "altsimplename": "Uncertainty"
+        },
+        {
+            "name": "The Sun",
+            "rank": 19,
+            "suit": "major",
+            "planet": "sun",
+            "element": "fire",
+            "sign": [],
+            "meanings": {
+                "upright": [
+                    "joy",
+                    "success",
+                    "celebration",
+                    "positivity",
+                    "vitality",
+                    "attainment",
+                    "material happiness",
+                    "achievement"
+                ],
+                "reversed": [
+                    "negativity",
+                    "depression",
+                    "sadness",
+                    "superficiality",
+                    "excess",
+                    "overindulgence"
+                ]
+            },
+            "img": "cards/m19.jpg",
+            "simplename": "Happiness",
+            "altsimplename": "Success"
+        },
+        {
+            "name": "Judgment",
+            "rank": 20,
+            "suit": "major",
+            "planet": "pluto",
+            "element": "fire",
+            "sign": [],
+            "meanings": {
+                "upright": [
+                    "judgment",
+                    "rebirth",
+                    "inner calling",
+                    "absolution",
+                    "awakening",
+                    "renewal",
+                    "resurrection",
+                    "reevaluation"
+                ],
+                "reversed": [
+                    "lack of self awareness",
+                    "doubt",
+                    "self loathing",
+                    "refusal of self-examination",
+                    "stunted personal growth"
+                ]
+            }
+        },
+        {
+            "name": "The World",
+            "rank": 21,
+            "suit": "major",
+            "planet": "saturn",
+            "element": "earth",
+            "sign": [],
+            "meanings": {
+                "upright": [
+                    "completion",
+                    "integration",
+                    "accomplishment",
+                    "travel",
+                    "fulfillment",
+                    "wholeness",
+                    "harmony",
+                    "achievement"
+                ],
+                "reversed": [
+                    "incompletion",
+                    "no closure",
+                    "lack of harmony",
+                    "lack of closure",
+                    "lack of fulfillment",
+                    "delayed success",
+                    "failed plans",
+                    "stagnation",
+                    "emptiness"
+                ]
+            },
+            "img": "cards/m21.jpg",
+            "simplename": "Completion",
+            "altsimplename": "Wholeness"
+        },
+        {
+            "name": "Ace of Wands",
+            "rank": 1,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "creation",
+                    "willpower",
+                    "inspiration",
+                    "desire",
+                    "vision",
+                    "beginnings",
+                    "potential"
+                ],
+                "reversed": [
+                    "lack of energy",
+                    "lack of passion",
+                    "lack of direction",
+                    "decreased libido",
+                    "lack of creativity"
+                ]
+            },
+            "img": "cards/w01.jpg",
+            "simplename": "Creation",
+            "altsimplename": "Inspiration"
+        },
+        {
+            "name": "Two of Wands",
+            "rank": 2,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "discovery",
+                    "future planning",
+                    "making decisions",
+                    "progress",
+                    "entrepreneurship",
+                    "having a long term vision",
+                    "opportunity"
+                ],
+                "reversed": [
+                    "personal goals",
+                    "fear of change",
+                    "playing safe",
+                    "bad planning",
+                    "lack of direction",
+                    "personal goals are unclear"
+                ]
+            },
+            "img": "cards/w02.jpg",
+            "simplename": "Planning",
+            "altsimplename": "Discovery"
+        },
+        {
+            "name": "Three of Wands",
+            "rank": 3,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "progress",
+                    "expansion",
+                    "preparation",
+                    "forethought",
+                    "enterprise",
+                    "trade",
+                    "negotiation",
+                    "good things to come",
+                    "rapid growth"
+                ],
+                "reversed": [
+                    "obstacles",
+                    "lack of progress",
+                    "delays",
+                    "frustration",
+                    "lack of growth",
+                    "lack of expansion",
+                    "bad things to come"
+                ]
+            },
+            "img": "cards/w03.jpg",
+            "simplename": "Expansion",
+            "altsimplename": "Foresight"
+        },
+        {
+            "name": "Four of Wands",
+            "rank": 4,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "relaxation",
+                    "celebration",
+                    "harmony",
+                    "marriage",
+                    "home",
+                    "community",
+                    "peace",
+                    "tranquility"
+                ],
+                "reversed": [
+                    "lack of support",
+                    "transient home",
+                    "community conflict",
+                    "domestic disharmony",
+                    "inner harmony"
+                ]
+            },
+            "img": "cards/w04.jpg",
+            "simplename": "Celebration",
+            "altsimplename": "Harmony"
+        },
+        {
+            "name": "Five of Wands",
+            "rank": 5,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "competition",
+                    "rivalry",
+                    "conflict",
+                    "strife",
+                    "tension",
+                    "disagreement",
+                    "arguments"
+                ],
+                "reversed": [
+                    "avoidance of conflict",
+                    "respecting differences",
+                    "conflict avoidance",
+                    "conflict resolution",
+                    "tension release"
+                ]
+            },
+            "img": "cards/w05.jpg",
+            "simplename": "Conflict",
+            "altsimplename": "Competition"
+        },
+        {
+            "name": "Six of Wands",
+            "rank": 6,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "victory",
+                    "success",
+                    "public reward",
+                    "progression",
+                    "triumph",
+                    "pride"
+                ],
+                "reversed": [
+                    "excess pride",
+                    "lack of recognition",
+                    "punishment",
+                    "lack of progress",
+                    "opposition",
+                    "fall from grace",
+                    "egotism"
+                ]
+            },
+            "img": "cards/w06.jpg",
+            "simplename": "Victory",
+            "altsimplename": "Recognition"
+        },
+        {
+            "name": "Seven of Wands",
+            "rank": 7,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "challenge",
+                    "protection",
+                    "perseverance",
+                    "defensiveness",
+                    "maintaining control",
+                    "standing your ground",
+                    "show of strength"
+                ],
+                "reversed": [
+                    "give up",
+                    "destruction",
+                    "fatigue",
+                    "overwhelmed",
+                    "exhaustion",
+                    "surrender",
+                    "lack of confidence"
+                ]
+            },
+            "img": "cards/w07.jpg",
+            "simplename": "Defense",
+            "altsimplename": "Perseverance"
+        },
+        {
+            "name": "Eight of Wands",
+            "rank": 8,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "alignment",
+                    "air travel",
+                    "action",
+                    "movement",
+                    "quick decisions"
+                ],
+                "reversed": [
+                    "panic",
+                    "waiting",
+                    "slowdown",
+                    "frustration",
+                    "miscommunication",
+                    "resisting change"
+                ]
+            },
+            "img": "cards/w08.jpg",
+            "simplename": "Speed",
+            "altsimplename": "Action"
+        },
+        {
+            "name": "Nine of Wands",
+            "rank": 9,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "resilience",
+                    "courage",
+                    "test of faith",
+                    "persistence",
+                    "boundaries",
+                    "grit"
+                ],
+                "reversed": [
+                    "hesitation",
+                    "defensiveness",
+                    "timidness",
+                    "wounded",
+                    "weariness",
+                    "hesitation",
+                    "feeling battered",
+                    "paranoia"
+                ]
+            },
+            "img": "cards/w09.jpg",
+            "simplename": "Resilience",
+            "altsimplename": "Persistence"
+        },
+        {
+            "name": "Ten of Wands",
+            "rank": 10,
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "accomplishment",
+                    "responsibility",
+                    "burden",
+                    "hard work",
+                    "stress",
+                    "completion"
+                ],
+                "reversed": [
+                    "inability to delegate",
+                    "overwork",
+                    "straining",
+                    "taking on too much",
+                    "avoiding responsibility",
+                    "burnt out",
+                    "overstressed",
+                    "release"
+                ]
+            },
+            "img": "cards/w10.jpg",
+            "simplename": "Burden",
+            "altsimplename": "Overcommitment"
+        },
+        {
+            "name": "Page of Wands",
+            "rank": "page",
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "inspiration",
+                    "ideas",
+                    "discovery",
+                    "free spirit",
+                    "freedom",
+                    "limitless potential",
+                    "exploration"
+                ],
+                "reversed": [
+                    "lack of direction",
+                    "discovery",
+                    "new approaches",
+                    "procrastination",
+                    "spiritual path"
+                ]
+            },
+            "img": "cards/w11.jpg",
+            "simplename": "Curiosity",
+            "altsimplename": "New Ideas"
+        },
+        {
+            "name": "Knight of Wands",
+            "rank": "knight",
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "energy",
+                    "passion",
+                    "inspired action",
+                    "adventure",
+                    "restlessness",
+                    "lust",
+                    "travel",
+                    "impulsiveness",
+                    "action"
+                ],
+                "reversed": [
+                    "selfishness",
+                    "no direction",
+                    "panic",
+                    "anger",
+                    "lack of control",
+                    "impulsiveness",
+                    "haste",
+                    "recklessness",
+                    "delays"
+                ]
+            },
+            "img": "cards/w12.jpg",
+            "simplename": "Adventure",
+            "altsimplename": "Impulsiveness"
+        },
+        {
+            "name": "Queen of Wands",
+            "rank": "queen",
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "confidence",
+                    "courage",
+                    "determination",
+                    "joy",
+                    "energy",
+                    "confidence",
+                    "independence",
+                    "cheer"
+                ],
+                "reversed": [
+                    "frustration",
+                    "introversion",
+                    "insecurity",
+                    "repressed energy",
+                    "moodiness"
+                ]
+            },
+            "img": "cards/w13.jpg",
+            "simplename": "Confidence",
+            "altsimplename": "Independence"
+        },
+        {
+            "name": "King of Wands",
+            "rank": "king",
+            "suit": "wands",
+            "planet": null,
+            "element": "fire",
+            "sign": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "natural-born leader",
+                    "visionary",
+                    "growth",
+                    "success",
+                    "entrepreneur",
+                    "spirituality",
+                    "motivation"
+                ],
+                "reversed": [
+                    "impulsiveness",
+                    "aggression",
+                    "stubbornness",
+                    "posessiveness",
+                    "controlling"
+                ]
+            },
+            "img": "cards/w14.jpg",
+            "simplename": "Leadership",
+            "altsimplename": "Vision"
+        },
+        {
+            "name": "Ace of Cups",
+            "rank": 1,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "proposal",
+                    "marriage",
+                    "intuition",
+                    "spirituality",
+                    "new feelings",
+                    "love"
+                ],
+                "reversed": [
+                    "self-love",
+                    "emotional loss",
+                    "codependency",
+                    "lack of trust",
+                    "emptiness"
+                ]
+            },
+            "img": "cards/c01.jpg",
+            "simplename": "New Feelings",
+            "altsimplename": "Emotional Beginnings"
+        },
+        {
+            "name": "Two of Cups",
+            "rank": 2,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "partnership",
+                    "mutual attraction",
+                    "compatibility",
+                    "union",
+                    "marriage",
+                    "romantic love",
+                    "unity",
+                    "connection"
+                ],
+                "reversed": [
+                    "imbalance",
+                    "broken communication",
+                    "clashing values",
+                    "disconnection",
+                    "tension"
+                ]
+            },
+            "img": "cards/c02.jpg",
+            "simplename": "Connection",
+            "altsimplename": "Partnership"
+        },
+        {
+            "name": "Three of Cups",
+            "rank": 3,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "friendship",
+                    "community",
+                    "happiness",
+                    "forgiveness",
+                    "reunion",
+                    "celebration",
+                    "joy",
+                    "support"
+                ],
+                "reversed": [
+                    "overindulgence",
+                    "gossip",
+                    "isolation",
+                    "loneliness",
+                    "party-crashing",
+                    "disruption",
+                    "conflict in community",
+                    "an affair"
+                ]
+            },
+            "img": "cards/c03.jpg",
+            "simplename": "Celebration",
+            "altsimplename": "Friendship"
+        },
+        {
+            "name": "Four of Cups",
+            "rank": 4,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "disillusioned",
+                    "missed opportunities",
+                    "regret",
+                    "remorse",
+                    "apathy",
+                    "discontent",
+                    "boredom",
+                    "disconnectedness"
+                ],
+                "reversed": [
+                    "sudden awareness",
+                    "choosing happiness",
+                    "acceptance",
+                    "moving on"
+                ]
+            },
+            "img": "cards/c04.jpg",
+            "simplename": "Apathy",
+            "altsimplename": "Contemplation"
+        },
+        {
+            "name": "Five of Cups",
+            "rank": 5,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "loss",
+                    "grief",
+                    "self-pity",
+                    "disappointment",
+                    "regret",
+                    "sadness",
+                    "remorse",
+                    "trauma",
+                    "heartbreak"
+                ],
+                "reversed": [
+                    "acceptance",
+                    "moving on",
+                    "finding peace",
+                    "forgiveness",
+                    "healing"
+                ]
+            },
+            "img": "cards/c05.jpg",
+            "simplename": "Loss",
+            "altsimplename": "Regret"
+        },
+        {
+            "name": "Six of Cups",
+            "rank": 6,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "nostalgia",
+                    "innocence",
+                    "family",
+                    "kindness",
+                    "creativity",
+                    "protection"
+                ],
+                "reversed": [
+                    "boredom",
+                    "stuck in the past",
+                    "stagnation",
+                    "leaving home"
+                ]
+            },
+            "img": "cards/c06.jpg",
+            "simplename": "Nostalgia",
+            "altsimplename": "Innocence"
+        },
+        {
+            "name": "Seven of Cups",
+            "rank": 7,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "opportunities",
+                    "new possibilities",
+                    "fantasy",
+                    "illusions",
+                    "meditation",
+                    "decisions"
+                ],
+                "reversed": [
+                    "lack of purpose",
+                    "diversion",
+                    "confusion",
+                    "lack of fulfillment",
+                    "temptation",
+                    "overwhelmed by choice"
+                ]
+            },
+            "img": "cards/c07.jpg",
+            "simplename": "Choices",
+            "altsimplename": "Illusion"
+        },
+        {
+            "name": "Eight of Cups",
+            "rank": 8,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "disappointment",
+                    "abandonment",
+                    "withdrawal",
+                    "escapism",
+                    "disillusionment"
+                ],
+                "reversed": [
+                    "hopelessness",
+                    "unfinished business",
+                    "avoidance",
+                    "fear of change",
+                    "aimless drifting",
+                    "stagnation"
+                ]
+            },
+            "img": "cards/c08.jpg",
+            "simplename": "Departure",
+            "altsimplename": "Search"
+        },
+        {
+            "name": "Nine of Cups",
+            "rank": 9,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "satisfaction",
+                    "emotional stability",
+                    "luxury",
+                    "self-sufficiency",
+                    "wish fulfillment",
+                    "happiness",
+                    "success",
+                    "gratitude"
+                ],
+                "reversed": [
+                    "lack of inner joy",
+                    "smugness",
+                    "self-satisfaction",
+                    "indulgence",
+                    "gloating",
+                    "dissatisfaction",
+                    "materialism"
+                ]
+            },
+            "img": "cards/c09.jpg",
+            "simplename": "Satisfaction",
+            "altsimplename": "Gratification"
+        },
+        {
+            "name": "Ten of Cups",
+            "rank": 10,
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "blessings",
+                    "divine love",
+                    "family",
+                    "harmony",
+                    "alignment",
+                    "joy",
+                    "bliss"
+                ],
+                "reversed": [
+                    "domestic strife",
+                    "broken home",
+                    "shattered dreams",
+                    "misalignment of values"
+                ]
+            },
+            "img": "cards/c10.jpg",
+            "simplename": "Happiness",
+            "altsimplename": "Harmony"
+        },
+        {
+            "name": "Page of Cups",
+            "rank": "page",
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "happy surprise",
+                    "dreams",
+                    "sensitivity",
+                    "intuitive messages",
+                    "creativity"
+                ],
+                "reversed": [
+                    "emotional immaturity",
+                    "insecurity",
+                    "disappointment",
+                    "creative block"
+                ]
+            },
+            "img": "cards/c11.jpg",
+            "simplename": "Curiosity",
+            "altsimplename": "Possibility"
+        },
+        {
+            "name": "Knight of Cups",
+            "rank": "knight",
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "idealist",
+                    "romantic",
+                    "emotional",
+                    "imaginative",
+                    "sensitive"
+                ],
+                "reversed": [
+                    "moodiness",
+                    "disappointment",
+                    "heartbreak",
+                    "sadness"
+                ]
+            },
+            "img": "cards/c12.jpg",
+            "simplename": "Romance",
+            "altsimplename": "Chivalry"
+        },
+        {
+            "name": "Queen of Cups",
+            "rank": "queen",
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "loving",
+                    "empathic",
+                    "intuitive",
+                    "psychic",
+                    "calm",
+                    "spiritual",
+                    "compassionate",
+                    "tenderhearted"
+                ],
+                "reversed": [
+                    "self-care",
+                    "martyrdom",
+                    "emotional manipulation",
+                    "insecurity",
+                    "dependency"
+                ]
+            },
+            "img": "cards/c13.jpg",
+            "simplename": "Compassion",
+            "altsimplename": "Calm"
+        },
+        {
+            "name": "King of Cups",
+            "rank": "king",
+            "suit": "cups",
+            "planet": null,
+            "element": "water",
+            "sign": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "meanings": {
+                "upright": [
+                    "wisdom",
+                    "understanding",
+                    "focus",
+                    "balance",
+                    "peacefulness",
+                    "diplomacy"
+                ],
+                "reversed": [
+                    "coldness",
+                    "moodiness",
+                    "volatile",
+                    "immature",
+                    "overreaction",
+                    "manipulative"
+                ]
+            },
+            "img": "cards/c14.jpg",
+            "simplename": "Empathy",
+            "altsimplename": "Control"
+        },
+        {
+            "name": "Ace of Swords",
+            "rank": 1,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "breakthroughs",
+                    "new ideas",
+                    "clarity",
+                    "success",
+                    "sharp mind",
+                    "cutting through confusion"
+                ],
+                "reversed": [
+                    "confusion",
+                    "brutality",
+                    "chaos",
+                    "clouded judgement"
+                ]
+            },
+            "img": "cards/s01.jpg",
+            "simplename": "Clarity",
+            "altsimplename": "Breakthrough"
+        },
+        {
+            "name": "Two of Swords",
+            "rank": 2,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "indecision",
+                    "stalemate",
+                    "impasse",
+                    "avoidance",
+                    "weighing options"
+                ],
+                "reversed": [
+                    "confusion",
+                    "lesser of two evils",
+                    "information overload",
+                    "tension"
+                ]
+            },
+            "img": "cards/s02.jpg",
+            "simplename": "Decisions",
+            "altsimplename": "Stalemate"
+        },
+        {
+            "name": "Three of Swords",
+            "rank": 3,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "grief",
+                    "suffering",
+                    "heartbreak",
+                    "sorrow",
+                    "emotional pain"
+                ],
+                "reversed": [
+                    "recovery",
+                    "forgiveness",
+                    "moving on",
+                    "releasing baggage",
+                    "optimism",
+                    "legging go of pain"
+                ]
+            },
+            "img": "cards/s03.jpg",
+            "simplename": "Heartbreak",
+            "altsimplename": "Loss"
+        },
+        {
+            "name": "Four of Swords",
+            "rank": 4,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "rest",
+                    "relaxation",
+                    "restoration",
+                    "contemplation",
+                    "recuperation",
+                    "meditation",
+                    "recovery"
+                ],
+                "reversed": [
+                    "restlessness",
+                    "burnout",
+                    "stress",
+                    "exhaustion",
+                    "repeating mistakes"
+                ]
+            },
+            "img": "cards/s04.jpg",
+            "simplename": "Rest",
+            "altsimplename": "Preparation"
+        },
+        {
+            "name": "Five of Swords",
+            "rank": 5,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "sneakiness",
+                    "conflict",
+                    "defeat",
+                    "competition",
+                    "ego",
+                    "win at all costs"
+                ],
+                "reversed": [
+                    "lingering resentment",
+                    "desire to reconcile",
+                    "forgiveness",
+                    "moving on",
+                    "releasing baggage"
+                ]
+            },
+            "img": "cards/s05.jpg",
+            "simplename": "Conflict",
+            "altsimplename": "Defeat"
+        },
+        {
+            "name": "Six of Swords",
+            "rank": 6,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "transition",
+                    "change",
+                    "rite of passage",
+                    "gradual movement",
+                    "release"
+                ],
+                "reversed": [
+                    "emotional baggage",
+                    "unresolved issues",
+                    "resistance to change",
+                    "difficulty moving on"
+                ]
+            },
+            "img": "cards/s06.jpg",
+            "simplename": "Transition",
+            "altsimplename": "Release"
+        },
+        {
+            "name": "Seven of Swords",
+            "rank": 7,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "betrayal",
+                    "deception",
+                    "getting away with something",
+                    "acting strategically",
+                    "self-interest",
+                    "sneaking around"
+                ],
+                "reversed": [
+                    "imposter syndrome",
+                    "deceit",
+                    "coming clean",
+                    "releasing guilt and shame",
+                    "getting away with nothing",
+                    "confrontation"
+                ]
+            },
+            "img": "cards/s07.jpg",
+            "simplename": "Deception",
+            "altsimplename": "Strategy"
+        },
+        {
+            "name": "Eight of Swords",
+            "rank": 8,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "imprisonment",
+                    "entrapment",
+                    "victim",
+                    "negative thoughts"
+                ],
+                "reversed": [
+                    "self-limiting beliefs",
+                    "inner critic",
+                    "open to new perspectives",
+                    "freedom"
+                ]
+            },
+            "img": "cards/s08.jpg",
+            "simplename": "Restriction",
+            "altsimplename": "Isolation"
+        },
+        {
+            "name": "Nine of Swords",
+            "rank": 9,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "hopelessness",
+                    "anxiety",
+                    "trauma",
+                    "depression",
+                    "worry",
+                    "fear",
+                    "nightmares"
+                ],
+                "reversed": [
+                    "secrets",
+                    "release of fear",
+                    "deep-seated concern",
+                    "inner turmoil"
+                ]
+            },
+            "img": "cards/s09.jpg",
+            "simplename": "Anxiety",
+            "altsimplename": "Fear"
+        },
+        {
+            "name": "Ten of Swords",
+            "rank": 10,
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "failure",
+                    "defeat",
+                    "deep wounds",
+                    "loss",
+                    "crisis",
+                    "betrayal"
+                ],
+                "reversed": [
+                    "recovery",
+                    "rebirth",
+                    "moving on",
+                    "restoration"
+                ]
+            },
+            "img": "cards/s10.jpg",
+            "simplename": "End",
+            "altsimplename": "Backstabbed"
+        },
+        {
+            "name": "Page of Swords",
+            "rank": "page",
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "curiosity",
+                    "mental energy",
+                    "innovation",
+                    "thirst for knowledge"
+                ],
+                "reversed": [
+                    "manipulation",
+                    "deception",
+                    "haste",
+                    "haphazard action"
+                ]
+            },
+            "img": "cards/s11.jpg",
+            "simplename": "Curiosity",
+            "altsimplename": "Vigilance"
+        },
+        {
+            "name": "Knight of Swords",
+            "rank": "knight",
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "action",
+                    "impulse",
+                    "defense of beliefs",
+                    "ambitious"
+                ],
+                "reversed": [
+                    "lack of direction",
+                    "restless",
+                    "unpredictability",
+                    "impulsive"
+                ]
+            },
+            "img": "cards/s12.jpg",
+            "simplename": "Action",
+            "altsimplename": "Impulsiveness"
+        },
+        {
+            "name": "Queen of Swords",
+            "rank": "queen",
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "complexity",
+                    "perceptive",
+                    "clear minded",
+                    "impartial",
+                    "independent"
+                ],
+                "reversed": [
+                    "cold hearted",
+                    "cruel",
+                    "bitter",
+                    "unforgiving",
+                    "resentful",
+                    "isolation"
+                ]
+            },
+            "img": "cards/s13.jpg",
+            "simplename": "Honesty",
+            "altsimplename": "Independence"
+        },
+        {
+            "name": "King of Swords",
+            "rank": "king",
+            "suit": "swords",
+            "planet": null,
+            "element": "air",
+            "sign": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "meanings": {
+                "upright": [
+                    "head over heart",
+                    "disciplined",
+                    "truthful",
+                    "just",
+                    "mental clarity",
+                    "authority",
+                    "intellect"
+                ],
+                "reversed": [
+                    "manipulative",
+                    "cruel",
+                    "weakness of character",
+                    "abuse of power"
+                ]
+            },
+            "img": "cards/s14.jpg",
+            "simplename": "Authority",
+            "altsimplename": "Intellect"
+        },
+        {
+            "name": "Ace of Pentacles",
+            "rank": 1,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "opportunity",
+                    "prosperity",
+                    "manifestation",
+                    "wealth",
+                    "abundance",
+                    "new venture"
+                ],
+                "reversed": [
+                    "lost opportunity",
+                    "missed chance",
+                    "bad investment",
+                    "lack of foresight"
+                ]
+            },
+            "img": "cards/p01.jpg",
+            "simplename": "Opportunity",
+            "altsimplename": "Prosperity"
+        },
+        {
+            "name": "Two of Pentacles",
+            "rank": 2,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "balance",
+                    "adaptability",
+                    "time management",
+                    "priorities"
+                ],
+                "reversed": [
+                    "loss of balance",
+                    "disorganized",
+                    "overwhelmed",
+                    "disarray",
+                    "over-committed"
+                ]
+            },
+            "img": "cards/p02.jpg",
+            "simplename": "Balance",
+            "altsimplename": "Adaptation"
+        },
+        {
+            "name": "Three of Pentacles",
+            "rank": 3,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "teamwork",
+                    "collaboration",
+                    "learning",
+                    "implementation"
+                ],
+                "reversed": [
+                    "disharmony",
+                    "disorganization",
+                    "group conflict",
+                    "working alone"
+                ]
+            },
+            "img": "cards/p03.jpg",
+            "simplename": "Teamwork",
+            "altsimplename": "Planning"
+        },
+        {
+            "name": "Four of Pentacles",
+            "rank": 4,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "conservativism",
+                    "frugality",
+                    "security",
+                    "scarcity",
+                    "control",
+                    "restraint"
+                ],
+                "reversed": [
+                    "over-spending",
+                    "greed",
+                    "materialism",
+                    "selfishness",
+                    "poverty",
+                    "unstable"
+                ]
+            },
+            "img": "cards/p04.jpg",
+            "simplename": "Security",
+            "altsimplename": "Greed"
+        },
+        {
+            "name": "Five of Pentacles",
+            "rank": 5,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "isolation",
+                    "insecurity",
+                    "worry",
+                    "financial loss",
+                    "poverty"
+                ],
+                "reversed": [
+                    "recovery",
+                    "charity",
+                    "improving health",
+                    "spiritual poverty"
+                ]
+            },
+            "img": "cards/p05.jpg",
+            "simplename": "Need",
+            "altsimplename": "Isolation"
+        },
+        {
+            "name": "Six of Pentacles",
+            "rank": 6,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "charity",
+                    "sharing",
+                    "giving",
+                    "sharing wealth",
+                    "generosity",
+                    "receiving"
+                ],
+                "reversed": [
+                    "power and domination",
+                    "strings attached",
+                    "stinginess",
+                    "self-care"
+                ]
+            },
+            "img": "cards/p06.jpg",
+            "simplename": "Charity",
+            "altsimplename": "Fairness"
+        },
+        {
+            "name": "Seven of Pentacles",
+            "rank": 7,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "long-term view",
+                    "sustainable results",
+                    "perseverance",
+                    "investment",
+                    "diligence",
+                    "hard work"
+                ],
+                "reversed": [
+                    "lack of rewards",
+                    "distractions",
+                    "disruption",
+                    "questioned investments"
+                ]
+            },
+            "img": "cards/p07.jpg",
+            "simplename": "Patience",
+            "altsimplename": "Investment"
+        },
+        {
+            "name": "Eight of Pentacles",
+            "rank": 8,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "mastery",
+                    "skill development",
+                    "diligence",
+                    "passion",
+                    "standards"
+                ],
+                "reversed": [
+                    "lack of passion",
+                    "uninspired",
+                    "lack of ambition",
+                    "no motivation"
+                ]
+            },
+            "img": "cards/p08.jpg",
+            "simplename": "Dedication",
+            "altsimplename": "Skill"
+        },
+        {
+            "name": "Nine of Pentacles",
+            "rank": 9,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "fruits of labor",
+                    "rewards",
+                    "luxury",
+                    "self-sufficiency",
+                    "financial independence"
+                ],
+                "reversed": [
+                    "reckless spending",
+                    "living beyond means",
+                    "false success",
+                    "living off others",
+                    "termination"
+                ]
+            },
+            "img": "cards/p09.jpg",
+            "simplename": "Luxury",
+            "altsimplename": "Self-sufficiency"
+        },
+        {
+            "name": "Ten of Pentacles",
+            "rank": 10,
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "wealth",
+                    "financial security",
+                    "family",
+                    "long-term success",
+                    "legacy"
+                ],
+                "reversed": [
+                    "fleeting success",
+                    "financial failure",
+                    "lack of stability",
+                    "lack of resources"
+                ]
+            },
+            "img": "cards/p10.jpg",
+            "simplename": "Wealth",
+            "altsimplename": "Legacy"
+        },
+        {
+            "name": "Page of Pentacles",
+            "rank": "page",
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "manifestation",
+                    "ambition",
+                    "desire",
+                    "financial opprotunity"
+                ],
+                "reversed": [
+                    "procrastination",
+                    "lack of progress",
+                    "greediness",
+                    "laziness"
+                ]
+            },
+            "img": "cards/p11.jpg",
+            "simplename": "Study",
+            "altsimplename": "Opportunity"
+        },
+        {
+            "name": "Knight of Pentacles",
+            "rank": "knight",
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "efficiency",
+                    "hard work",
+                    "responsibility",
+                    "focus",
+                    "determination",
+                    "productivity",
+                    "routine"
+                ],
+                "reversed": [
+                    "boredom",
+                    "laziness",
+                    "obsession with work",
+                    "work without reward",
+                    "feeling overwhelmed"
+                ]
+            },
+            "img": "cards/p12.jpg",
+            "simplename": "Efficiency",
+            "altsimplename": "Routine"
+        },
+        {
+            "name": "Queen of Pentacles",
+            "rank": "queen",
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "practicality",
+                    "creature comforts",
+                    "financial security",
+                    "generosity",
+                    "matriarchal"
+                ],
+                "reversed": [
+                    "jealousy",
+                    "smothering",
+                    "self care",
+                    "financially dependent"
+                ]
+            },
+            "img": "cards/p13.jpg",
+            "simplename": "Nurturing",
+            "altsimplename": "Practicality"
+        },
+        {
+            "name": "King of Pentacles",
+            "rank": "king",
+            "suit": "pentacles",
+            "planet": null,
+            "element": "earth",
+            "sign": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "meanings": {
+                "upright": [
+                    "abundance",
+                    "prosperity",
+                    "security",
+                    "wealth",
+                    "leadership"
+                ],
+                "reversed": [
+                    "financially inept",
+                    "greed",
+                    "spending problems",
+                    "stubborn",
+                    "indulgence"
+                ]
+            },
+            "img": "cards/p14.jpg",
+            "simplename": "Abundance",
+            "altsimplename": "Security"
+        }
+    ],
+    "suits": [
+        {
+            "name": "wands",
+            "element": "fire",
+            "direction": "south",
+            "season": "summer",
+            "time": "noon",
+            "signs": [
+                "aries",
+                "leo",
+                "sagittarius"
+            ],
+            "keywords": [
+                "creativity",
+                "action",
+                "passion",
+                "inspiration"
+            ]
+        },
+        {
+            "name": "swords",
+            "element": "air",
+            "direction": "east",
+            "season": "spring",
+            "time": "dawn",
+            "signs": [
+                "gemini",
+                "libra",
+                "aquarius"
+            ],
+            "keywords": [
+                "logic",
+                "ideas",
+                "intellect",
+                "communication"
+            ]
+        },
+        {
+            "name": "cups",
+            "element": "water",
+            "direction": "west",
+            "season": "autumn",
+            "time": "dusk",
+            "signs": [
+                "cancer",
+                "scorpio",
+                "pisces"
+            ],
+            "keywords": [
+                "emotions",
+                "feelings",
+                "intuition",
+                "relationships"
+            ]
+        },
+        {
+            "name": "pentacles",
+            "element": "earth",
+            "direction": "north",
+            "season": "winter",
+            "time": "midnight",
+            "signs": [
+                "taurus",
+                "virgo",
+                "capricorn"
+            ],
+            "keywords": [
+                "wealth",
+                "health",
+                "practicality",
+                "the body"
+            ]
+        }
+    ]
+}

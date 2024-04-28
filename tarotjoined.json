@@ -1,0 +1,1195 @@
+{
+  "data": [
+    {
+      "record": {
+        "description": "tarot cards and basic information about them, as well as references to corresponding scans",
+        "cards": {
+        },
+        "name": "The Fool",
+        "number": "0",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m00.jpg",
+        "simplename": "Beginnings",
+        "altsimplename": "Spontaneity"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Magician",
+        "number": "1",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m01.jpg",
+        "simplename": "Power",
+        "altsimplename": "Manifestation"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The High Priestess",
+        "number": "2",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m02.jpg",
+        "simplename": "Mystery",
+        "altsimplename": "Intuition"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Empress",
+        "number": "3",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m03.jpg",
+        "simplename": "Fertility",
+        "altsimplename": "Abundance"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Emperor",
+        "number": "4",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m04.jpg",
+        "simplename": "Authority",
+        "altsimplename": "Structure"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Hierophant",
+        "number": "5",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m05.jpg",
+        "simplename": "Tradition",
+        "altsimplename": "Conformity"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Lovers",
+        "number": "6",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m06.jpg",
+        "simplename": "Relationships",
+        "altsimplename": "Choices"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Chariot",
+        "number": "7",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m07.jpg",
+        "simplename": "Victory",
+        "altsimplename": "Determination"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Strength",
+        "number": "8",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m08.jpg",
+        "simplename": "Courage",
+        "altsimplename": "Influence"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Hermit",
+        "number": "9",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m09.jpg",
+        "simplename": "Solitude",
+        "altsimplename": "Reflection"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Wheel of Fortune",
+        "number": "10",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m10.jpg",
+        "simplename": "Fate",
+        "altsimplename": "Cycles"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Justice",
+        "number": "11",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m11.jpg",
+        "simplename": "Fairness",
+        "altsimplename": "Truth"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Hanged Man",
+        "number": "12",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m12.jpg",
+        "simplename": "Sacrifice",
+        "altsimplename": "Letting Go"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Death",
+        "number": "13",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m13.jpg",
+        "simplename": "Transformation",
+        "altsimplename": "Ending"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Temperance",
+        "number": "14",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m14.jpg",
+        "simplename": "Balance",
+        "altsimplename": "Moderation"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Devil",
+        "number": "15",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m15.jpg",
+        "simplename": "Bondage",
+        "altsimplename": "Materialism"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Tower",
+        "number": "16",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m16.jpg",
+        "simplename": "Disaster",
+        "altsimplename": "Upheaval"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Star",
+        "number": "17",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m17.jpg",
+        "simplename": "Hope",
+        "altsimplename": "Inspiration"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Moon",
+        "number": "18",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m18.jpg",
+        "simplename": "Illusion",
+        "altsimplename": "Uncertainty"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The Sun",
+        "number": "19",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m19.jpg",
+        "simplename": "Happiness",
+        "altsimplename": "Success"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Judgement",
+        "number": "20",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m20.jpg",
+        "simplename": "Reckoning",
+        "altsimplename": "Awakening"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "The World",
+        "number": "21",
+        "arcana": "Major Arcana",
+        "suit": {
+        },
+        "img": "m21.jpg",
+        "simplename": "Completion",
+        "altsimplename": "Wholeness"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Ace of Cups",
+        "number": "1",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c01.jpg",
+        "simplename": "New Feelings",
+        "altsimplename": "Emotional Beginnings"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Two of Cups",
+        "number": "2",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c02.jpg",
+        "simplename": "Connection",
+        "altsimplename": "Partnership"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Three of Cups",
+        "number": "3",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c03.jpg",
+        "simplename": "Celebration",
+        "altsimplename": "Friendship"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Four of Cups",
+        "number": "4",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c04.jpg",
+        "simplename": "Apathy",
+        "altsimplename": "Contemplation"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Five of Cups",
+        "number": "5",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c05.jpg",
+        "simplename": "Loss",
+        "altsimplename": "Regret"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Six of Cups",
+        "number": "6",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c06.jpg",
+        "simplename": "Nostalgia",
+        "altsimplename": "Innocence"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Seven of Cups",
+        "number": "7",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c07.jpg",
+        "simplename": "Choices",
+        "altsimplename": "Illusion"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Eight of Cups",
+        "number": "8",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c08.jpg",
+        "simplename": "Departure",
+        "altsimplename": "Search"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Nine of Cups",
+        "number": "9",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c09.jpg",
+        "simplename": "Satisfaction",
+        "altsimplename": "Gratification"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Ten of Cups",
+        "number": "10",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c10.jpg",
+        "simplename": "Happiness",
+        "altsimplename": "Harmony"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Page of Cups",
+        "number": "11",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c11.jpg",
+        "simplename": "Curiosity",
+        "altsimplename": "Possibility"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Knight of Cups",
+        "number": "12",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c12.jpg",
+        "simplename": "Romance",
+        "altsimplename": "Chivalry"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Queen of Cups",
+        "number": "13",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c13.jpg",
+        "simplename": "Compassion",
+        "altsimplename": "Calm"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "King of Cups",
+        "number": "14",
+        "arcana": "Minor Arcana",
+        "suit": "Cups",
+        "img": "c14.jpg",
+        "simplename": "Empathy",
+        "altsimplename": "Control"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Ace of Swords",
+        "number": "1",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s01.jpg",
+        "simplename": "Clarity",
+        "altsimplename": "Breakthrough"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Two of Swords",
+        "number": "2",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s02.jpg",
+        "simplename": "Decisions",
+        "altsimplename": "Stalemate"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Three of Swords",
+        "number": "3",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s03.jpg",
+        "simplename": "Heartbreak",
+        "altsimplename": "Loss"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Four of Swords",
+        "number": "4",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s04.jpg",
+        "simplename": "Rest",
+        "altsimplename": "Preparation"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Five of Swords",
+        "number": "5",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s05.jpg",
+        "simplename": "Conflict",
+        "altsimplename": "Defeat"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Six of Swords",
+        "number": "6",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s06.jpg",
+        "simplename": "Transition",
+        "altsimplename": "Release"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Seven of Swords",
+        "number": "7",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s07.jpg",
+        "simplename": "Deception",
+        "altsimplename": "Strategy"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Eight of Swords",
+        "number": "8",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s08.jpg",
+        "simplename": "Restriction",
+        "altsimplename": "Isolation"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Nine of Swords",
+        "number": "9",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s09.jpg",
+        "simplename": "Anxiety",
+        "altsimplename": "Fear"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Ten of Swords",
+        "number": "10",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s10.jpg",
+        "simplename": "End",
+        "altsimplename": "Backstabbed"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Page of Swords",
+        "number": "11",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s11.jpg",
+        "simplename": "Curiosity",
+        "altsimplename": "Vigilance"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Knight of Swords",
+        "number": "12",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s12.jpg",
+        "simplename": "Action",
+        "altsimplename": "Impulsiveness"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Queen of Swords",
+        "number": "13",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s13.jpg",
+        "simplename": "Honesty",
+        "altsimplename": "Independence"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "King of Swords",
+        "number": "14",
+        "arcana": "Minor Arcana",
+        "suit": "Swords",
+        "img": "s14.jpg",
+        "simplename": "Authority",
+        "altsimplename": "Intellect"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Ace of Wands",
+        "number": "1",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w01.jpg",
+        "simplename": "Creation",
+        "altsimplename": "Inspiration"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Two of Wands",
+        "number": "2",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w02.jpg",
+        "simplename": "Planning",
+        "altsimplename": "Discovery"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Three of Wands",
+        "number": "3",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w03.jpg",
+        "simplename": "Expansion",
+        "altsimplename": "Foresight"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Four of Wands",
+        "number": "4",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w04.jpg",
+        "simplename": "Celebration",
+        "altsimplename": "Harmony"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Five of Wands",
+        "number": "5",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w05.jpg",
+        "simplename": "Conflict",
+        "altsimplename": "Competition"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Six of Wands",
+        "number": "6",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w06.jpg",
+        "simplename": "Victory",
+        "altsimplename": "Recognition"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Seven of Wands",
+        "number": "7",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w07.jpg",
+        "simplename": "Defense",
+        "altsimplename": "Perseverance"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Eight of Wands",
+        "number": "8",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w08.jpg",
+        "simplename": "Speed",
+        "altsimplename": "Action"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Nine of Wands",
+        "number": "9",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w09.jpg",
+        "simplename": "Resilience",
+        "altsimplename": "Persistence"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Ten of Wands",
+        "number": "10",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w10.jpg",
+        "simplename": "Burden",
+        "altsimplename": "Overcommitment"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Page of Wands",
+        "number": "11",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w11.jpg",
+        "simplename": "Curiosity",
+        "altsimplename": "New Ideas"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Knight of Wands",
+        "number": "12",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w12.jpg",
+        "simplename": "Adventure",
+        "altsimplename": "Impulsiveness"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Queen of Wands",
+        "number": "13",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w13.jpg",
+        "simplename": "Confidence",
+        "altsimplename": "Independence"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "King of Wands",
+        "number": "14",
+        "arcana": "Minor Arcana",
+        "suit": "Wands",
+        "img": "w14.jpg",
+        "simplename": "Leadership",
+        "altsimplename": "Vision"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Ace of Pentacles",
+        "number": "1",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p01.jpg",
+        "simplename": "Opportunity",
+        "altsimplename": "Prosperity"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Two of Pentacles",
+        "number": "2",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p02.jpg",
+        "simplename": "Balance",
+        "altsimplename": "Adaptation"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Three of Pentacles",
+        "number": "3",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p03.jpg",
+        "simplename": "Teamwork",
+        "altsimplename": "Planning"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Four of Pentacles",
+        "number": "4",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p04.jpg",
+        "simplename": "Security",
+        "altsimplename": "Greed"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Five of Pentacles",
+        "number": "5",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p05.jpg",
+        "simplename": "Need",
+        "altsimplename": "Isolation"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Six of Pentacles",
+        "number": "6",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p06.jpg",
+        "simplename": "Charity",
+        "altsimplename": "Fairness"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Seven of Pentacles",
+        "number": "7",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p07.jpg",
+        "simplename": "Patience",
+        "altsimplename": "Investment"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Eight of Pentacles",
+        "number": "8",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p08.jpg",
+        "simplename": "Dedication",
+        "altsimplename": "Skill"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Nine of Pentacles",
+        "number": "9",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p09.jpg",
+        "simplename": "Luxury",
+        "altsimplename": "Self-sufficiency"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Ten of Pentacles",
+        "number": "10",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p10.jpg",
+        "simplename": "Wealth",
+        "altsimplename": "Legacy"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Page of Pentacles",
+        "number": "11",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p11.jpg",
+        "simplename": "Study",
+        "altsimplename": "Opportunity"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Knight of Pentacles",
+        "number": "12",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p12.jpg",
+        "simplename": "Efficiency",
+        "altsimplename": "Routine"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "Queen of Pentacles",
+        "number": "13",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p13.jpg",
+        "simplename": "Nurturing",
+        "altsimplename": "Practicality"
+      }
+    },
+    {
+      "record": {
+        "description": {
+        },
+        "cards": {
+        },
+        "name": "King of Pentacles",
+        "number": "14",
+        "arcana": "Minor Arcana",
+        "suit": "Pentacles",
+        "img": "p14.jpg",
+        "simplename": "Abundance",
+        "altsimplename": "Security"
+      }
+    }
+  ]
+}
