@@ -83,16 +83,13 @@ def send_discord_message(webhook_url, message):
 
 # Function to generate a tarot reading
 def generate_tarot_reading(tarot_draw, style, language, context):
-    gpt_model = "gpt-4"
-    gpt_temperature = 0.2
     australia_timezone = pytz.timezone('Australia/Sydney')
     current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
     send_discord_message(webhook_url, f"A tarot draw started at {current_time}!\n{tarot_draw}, {style}, {language} {gpt_model}, Temp: {gpt_temperature}")
     
     
     system_prompt = f"""
-    Instructions: Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. 
-    Include a section for each category describing the interpretation from the perspective of {style}. 
+    Instructions: Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}.  
     When providing the headings for each section, include the card and include the common simple description or name of the card. 
     Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 900 word reading and format this using Markdown formatting. Use casual conversational tone using the top 2000 words in common use. 
     
@@ -100,18 +97,16 @@ def generate_tarot_reading(tarot_draw, style, language, context):
     # Thesis - [Card Name] - [card expressive name]
     [Thesis interpretation]
     [Thesis interpretation 2nd paragraph]
-    [Thesis {style} interpretation short paragraph]
     # Antithesis - [Card Name] - [card Expressive name]
     [Antithesis interpretation]
     [Antithesis interpretation 2nd paragraph]
-    [Antithesis {style} interpretation short paragraph]
     # Synthesis - [Card Name] - [card expressive name]
     [Synthesis interpretation]
     [Synthesis interpretation 2nd paragraph]
-    [Synthesis {style} interpretation short paragraph]
     # Conclusion
     [Conclusion paragraph]
     [Overall reading interpretation ensuring application to real life challenges and mentioning the individual cards chosen {tarot_draw} and their place in the Thesis, Antithesis, synthesis structure.]
+    [brief comment on the reading from the perspective of {style} tarot style and interpretation corpus.]
     """
     response = client.chat.completions.create(
         model=gpt_model,
@@ -123,16 +118,13 @@ def generate_tarot_reading(tarot_draw, style, language, context):
     return response.choices[0].message.content
 
 def generate_advanced_tarot_reading(tarot_draw, style, language, context):
-    gpt_model = "gpt-4"
-    gpt_temperature = 0.2
     australia_timezone = pytz.timezone('Australia/Sydney')
     current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
     send_discord_message(webhook_url, f"A tarot draw started at {current_time}!\n{tarot_draw}, {style}, {language} {gpt_model}, Temp: {gpt_temperature}")
     
-    system_prompt = f""" Say Hello"""
-   
+    # system_prompt = f""" Say Hello"""
     
-    ssystem_prompt = f"""
+    system_prompt = f"""
     Instructions: Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. 
     
     for each of 'thesis, antithesis, synthesis', include one paragraph that speaks to insights from the {style} tarot style and interpretation corpus. 
@@ -208,7 +200,7 @@ context = st.text_input("Optional: provide some context for your reading if you 
 show_advanced_options = st.checkbox("Show advanced options")
 
 # Default values for style and language
-style = "Rider-Waite-Smith Tarot"
+style = random.choice(tarot_decks)
 language = "Plain English"
 
 # Check if advanced options should be shown
@@ -232,9 +224,9 @@ if st.button("Draw Tarot Cards and Generate Reading"):
                                 
                 """)
                 # Language: {language} and in the style of {style}
-
+    gpt_model = "gpt-4"
+    gpt_temperature = 0.2
     # Generate tarot reading
-    # progress_bar_animation()
     if show_advanced_options:
         tarot_reading = generate_advanced_tarot_reading(tarot_draw, style, language, context)
     else:
@@ -244,7 +236,7 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     output_text = f"Your Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
 
     # Check if the user wants to see the technical info
-    technical_info = f"Version {version}, Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nStyle: {style} Language: {language}\n  Your Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
+    technical_info = f"Version {version}, Context: {context} ({', '.join(tarot_draw)})\nModel: {gpt_model} Temperature: {gpt_temperature} \nStyle: {style} Language: {language}\n  Your Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
     
 
     # Send the output text to a Discord server
