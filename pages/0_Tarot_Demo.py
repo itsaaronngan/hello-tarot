@@ -26,7 +26,7 @@ from threading import Thread
 
 # Initialize your API key using Streamlit secrets
 openai_api_key = st.secrets["openai"]["api_key"]
-version = 0.2
+version = 0.3
 
 # Your Discord Webhook URL
 webhook_url = st.secrets["discord"]["webhook_url"]
@@ -48,13 +48,11 @@ tarot_decks = [
 
 # List of English language styles
 language_styles = [
-    "UK English", "Aussie Slang English", 
+    "plain english", "Aussie Slang English", 
     "African American Vernacular English (AAVE)", "Indian English", 
     "Singaporean English (Singlish)", "Caribbean English", "Canadian English", 
-    "Spanglish", "International English", "Semantic Activism", "Plain English", 
-    "Gender-neutral English", "Easy Read English", "Legalese-Free English", 
-    "TikTok Youth Slang", "Non-native Speaker English", "Culturally Specific English", 
-    "Elder Speak", "Technical English", "Pirate English", "Text Speak", "Shakespearean English",
+    "Spanglish", "Semantic Activism", "Gender-neutral English", "Easy Read English",  
+    "Elder Speak", "Shakespearean English",
 ]
 
 # Tarot Cards Definitions
@@ -86,7 +84,7 @@ def send_discord_message(webhook_url, message):
 # Function to generate a tarot reading
 def generate_tarot_reading(tarot_draw, style, language, context):
     gpt_model = "gpt-4"
-    gpt_temperature = 1
+    gpt_temperature = 0.2
     australia_timezone = pytz.timezone('Australia/Sydney')
     current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
     send_discord_message(webhook_url, f"A tarot draw started at {current_time}!\n{tarot_draw}, {style}, {language} {gpt_model}, Temp: {gpt_temperature}")
@@ -101,21 +99,25 @@ def generate_tarot_reading(tarot_draw, style, language, context):
     For the overall reading, interpret how these cards interact in the context of real life challenges and opportunities. Any time specific significant challenges are mentioned provide a short reassurance affirming that the reader has what they need.
     
     Response Style, formatting, and Length:
-    Give me a 700 word reading. Use Markdown formatting. 
+    Give me a 900 word reading. Use Markdown formatting. 
     Use {language} for the reading.
-    Use casual conversational tone using the 2000 words in common use. 
+    Use casual conversational tone using the top 2000 words in common use. 
 
     Sample Structure:
     # Thesis - [Card Name] - [card expressive name]
     [Thesis interpretation]
-    [Thesis {style} interpretation paragraph]
+    [Thesis interpretation 2nd paragraph]
+    [Thesis {style} interpretation short paragraph]
     # Antithesis - [Card Name] - [card Expressive name]
     [Antithesis interpretation]
-    [Antithesis {style} interpretation paragraph]
+    [Antithesis interpretation 2nd paragraph]
+    [Antithesis {style} interpretation short paragraph]
     # Synthesis - [Card Name] - [card expressive name]
     [Synthesis interpretation]
-    [Synthesis {style} interpretation paragraph]
+    [Synthesis interpretation 2nd paragraph]
+    [Synthesis {style} interpretation short paragraph]
     # Conclusion
+    [Conclusion paragraph]
     [Overall reading interpretation ensuring application to real life challenges and mentioning the individual cards chosen {tarot_draw} and their place in the Thesis, Antithesis, synthesis structure.]
     """
     response = client.chat.completions.create(
@@ -126,13 +128,6 @@ def generate_tarot_reading(tarot_draw, style, language, context):
         ],
     )
     return response.choices[0].message.content
-
-def progress_bar_animation(duration=20):
-    progress_bar = st.progress(0)
-    for percent_complete in range(100):
-        time.sleep(duration / 100)
-        progress_bar.progress(percent_complete + 1)
-    st.success("Process completed!")
 
 def split_messages(message, limit=1900):
     """
@@ -166,9 +161,19 @@ st.title(f"Thesis Antithesis Synthesis Tarot Reading v{version}")
 # User inputs
 context = st.text_input("Optional: provide some context for your reading if you prefer a more specific result", "")
 
-# Dropdown menu for selecting a tarot deck and language style
-style = st.selectbox("What deck, version, or school of tarot would you like to draw from:", tarot_decks)
-language = st.selectbox("What language do you want your reading in?:", language_styles)
+# Checkbox for showing advanced options
+show_advanced_options = st.checkbox("Show advanced options")
+
+# Default values for style and language
+style = "Rider-Waite-Smith Tarot"
+language = "Plain English"
+
+# Check if advanced options should be shown
+if show_advanced_options:
+    # Dropdown menu for selecting a tarot deck and language style
+    style = st.selectbox("What deck, version, or school of tarot would you like to draw from:", tarot_decks)
+    language = st.selectbox("What language do you want your reading in?:", language_styles)
+
 
 if st.button("Draw Tarot Cards and Generate Reading"):
     # Picking 3 random cards
@@ -181,32 +186,36 @@ if st.button("Draw Tarot Cards and Generate Reading"):
                 Your reading is being generated.
 
                 this takes approx 20-40 seconds
-                
-                Language: {language} and in the style of {style}
                                 
                 """)
-
+                # Language: {language} and in the style of {style}
 
     # Generate tarot reading
     # progress_bar_animation()
     tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
    
     # Prepare the output text
-    output_text = f"Version {version}, Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nStyle: {style} Language: {language}\nYour Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
+    output_text = f"Your Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
+
+    # Check if the user wants to see the technical info
+    technical_info = f"Version {version}, Context: {context} ({', '.join(tarot_draw)})\nModel: GPT-4, Temperature: 1\nStyle: {style} Language: {language}\n  Your Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
+    
 
     # Send the output text to a Discord server
     # Get the current time in Australia
     australia_timezone = pytz.timezone('Australia/Sydney')
     current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
     
-    send_discord_message(webhook_url, output_text)
+    send_discord_message(webhook_url, technical_info)
 
-
+    # Display the results in a text area for easy copying
+    # st.text_area('Your Reading:', value=output_text, height=800)
+    
     # Display the results
     st.markdown(output_text)
 
     # Split the message if it's too long
-    messages = split_messages(output_text)
+    messages = split_messages(technical_info)
 
     # Send each part of the message to the Discord server
     for msg in messages:
