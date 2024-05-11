@@ -89,7 +89,50 @@ def generate_tarot_reading(tarot_draw, style, language, context):
     current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
     send_discord_message(webhook_url, f"A tarot draw started at {current_time}!\n{tarot_draw}, {style}, {language} {gpt_model}, Temp: {gpt_temperature}")
     
+    
     system_prompt = f"""
+    Instructions: Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. 
+    Include a section for each category describing the interpretation from the perspective of {style}. 
+    When providing the headings for each section, include the card and include the common simple description or name of the card. 
+    Interpret how these cards interact in the context of real life challenges and opportunities. Give me a 900 word reading and format this using Markdown formatting. Use casual conversational tone using the top 2000 words in common use. 
+    
+    Sample Structure:
+    # Thesis - [Card Name] - [card expressive name]
+    [Thesis interpretation]
+    [Thesis interpretation 2nd paragraph]
+    [Thesis {style} interpretation short paragraph]
+    # Antithesis - [Card Name] - [card Expressive name]
+    [Antithesis interpretation]
+    [Antithesis interpretation 2nd paragraph]
+    [Antithesis {style} interpretation short paragraph]
+    # Synthesis - [Card Name] - [card expressive name]
+    [Synthesis interpretation]
+    [Synthesis interpretation 2nd paragraph]
+    [Synthesis {style} interpretation short paragraph]
+    # Conclusion
+    [Conclusion paragraph]
+    [Overall reading interpretation ensuring application to real life challenges and mentioning the individual cards chosen {tarot_draw} and their place in the Thesis, Antithesis, synthesis structure.]
+    """
+    response = client.chat.completions.create(
+        model=gpt_model,
+        temperature=gpt_temperature,
+        messages=[
+            {"role": "system", "content": system_prompt}
+        ],
+    )
+    return response.choices[0].message.content
+
+def generate_advanced_tarot_reading(tarot_draw, style, language, context):
+    gpt_model = "gpt-4"
+    gpt_temperature = 0.2
+    australia_timezone = pytz.timezone('Australia/Sydney')
+    current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
+    send_discord_message(webhook_url, f"A tarot draw started at {current_time}!\n{tarot_draw}, {style}, {language} {gpt_model}, Temp: {gpt_temperature}")
+    
+    system_prompt = f""" Say Hello"""
+   
+    
+    ssystem_prompt = f"""
     Instructions: Give me a warm and empathetic 'thesis, antithesis, synthesis' tarot card reading for these cards: {tarot_draw}. 
     
     for each of 'thesis, antithesis, synthesis', include one paragraph that speaks to insights from the {style} tarot style and interpretation corpus. 
@@ -192,7 +235,10 @@ if st.button("Draw Tarot Cards and Generate Reading"):
 
     # Generate tarot reading
     # progress_bar_animation()
-    tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
+    if show_advanced_options:
+        tarot_reading = generate_advanced_tarot_reading(tarot_draw, style, language, context)
+    else:
+        tarot_reading = generate_tarot_reading(tarot_draw, style, language, context)
    
     # Prepare the output text
     output_text = f"Your Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
@@ -206,8 +252,6 @@ if st.button("Draw Tarot Cards and Generate Reading"):
     australia_timezone = pytz.timezone('Australia/Sydney')
     current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
     
-    send_discord_message(webhook_url, technical_info)
-
     # Display the results in a text area for easy copying
     # st.text_area('Your Reading:', value=output_text, height=800)
     
