@@ -177,7 +177,8 @@ draw_style = "Thesis Antithesis Synthesis Spread"
 if 'draw_style' not in st.session_state:
     st.session_state.draw_style = draw_style
 
-st.title(f"{draw_style} v{version}")
+st.title(f"Simple Tarot Reading🔮")
+st.subheader(f"{draw_style} v{version}")
 
 # User inputs
 context = st.text_input("Optional attunement: Align this reading with your personal situation, context, or emotions", "")
