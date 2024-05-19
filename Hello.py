@@ -1,47 +1,74 @@
-# Copyright (c) Streamlit Inc. (2018-2022) Snowflake Inc. (2022)
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 import streamlit as st
+import os
 
 def run():
     st.set_page_config(
-        page_title="Helpful Info 👋",
-        page_icon="👋",
+        page_title="Simple Tarot",
+        page_icon="🔮",
     )
 
-    st.write("# Welcome to Simple Tarot! 👋")
-    st.page_link("pages/0_Tarot_Demo.py", label="Go directly to Tarot Demo", icon="🏠")
+    st.write("# Welcome to Simple Tarot! 🔮")
+    st.markdown(
+        """
+        Welcome to Simple Tarot, dear friend. 🌟
 
-    st.sidebar.success("Select Tarot Demo above.")
+        **We’re here to help you find clarity and peace through the wisdom of tarot.**
+
+        ### How It Works:
+        1. **Add your personal context** (if you like, this is optional).
+        2. **Click generate reading** and let us gently guide you through a simple Thesis, Antithesis, Synthesis reading.
+        """
+    )
+
+    st.page_link("pages/0_Simple_Tarot.py", label="🔮🔮🔮 Begin your reading now 🔮🔮🔮", icon="🙏")
+    
+    st.markdown("---", unsafe_allow_html=True)
 
     st.markdown(
-    """
-    Welcome to the Thesis-Antithesis-Synthesis Tarot Process!
-    **👈 Select a "Tarot Demo" from the sidebar** to begin each step of the process and discover insights.
-    ### Understand the Steps:
-    - **Thesis (Tarot Card 1)**: Represents the current situation or issue. 
-    - **Antithesis (Tarot Card 2)**: Shows the opposing forces or challenges.
-    - **Synthesis (Tarot Card 3)**: Reveals the resolution or integration of the first two cards.
+        """
+        ### The Thesis, Antithesis, Synthesis Method:
+        - **Thesis (Card 1)**: Reflects your current situation, helping you understand where you are.
+        - **Antithesis (Card 2)**: Highlights challenges or opposing forces you may be facing.
+        - **Synthesis (Card 3)**: Offers a resolution or integration, showing the path forward.
 
-    This is a simple tarot reading process that can help you gain insights and clarity on any situation or question.
-
-    This app is under development and will be updated with more features and improvements. Stay tuned for more updates! 🚀
-
-    This app uses GPT-4 from OpenAI to generate tarot card interpretations. 
-    """
+        Begin your journey by selecting **"Simple Tarot"** from the sidebar. Let us help you navigate life's uncertainties with compassion and insight.
+        """
     )
 
+    st.page_link("pages/0_Simple_Tarot.py", label="🔮🔮🔮 Begin your reading now 🔮🔮🔮", icon="🙏")
+
+    st.markdown("---", unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    st.markdown(
+        """
+        This app uses GPT-4 from OpenAI to provide thoughtful and empathetic interpretations of your tarot cards.
+
+        We hope you find comfort and guidance in your tarot journey. You are not alone. 💖
+        """
+    )
+
+    st.page_link("pages/0_Simple_Tarot.py", label="🔮🔮🔮 Begin your reading now 🔮🔮🔮", icon="🙏")
+
+    if st.button("Learn About Advanced Options"):
+        st.markdown(
+            """
+            ### Advanced Options:
+
+            For those who seek a more tailored experience, our advanced options offer:
+
+            - **Select a specific tarot deck**: Choose from a variety of decks to find the imagery that resonates with you.
+            - **Pick a language style**: Receive your reading in different English dialects or styles, from plain English to Shakespearean English.
+            - **Choose a tarot draw style**: Explore various spreads like the Celtic Cross, Horseshoe Spread, or Career Spread to suit your needs.
+
+            Advanced options provide a deeper, more personalized reading experience. 
+
+            Stay tuned for more features and updates 🙏
+            """
+        )
+
+    st.sidebar.success("Select Simple Tarot to begin your reading.")
 
 if __name__ == "__main__":
     run()
