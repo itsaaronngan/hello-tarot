@@ -27,7 +27,7 @@ from tarot_config import tarot_decks, language_styles, draw_tarot_cards, tarot_d
 
 # Initialize your API key using Streamlit secrets
 openai_api_key = st.secrets["openai"]["api_key"]
-version = "0.6 (10 Jun 24)"
+version = 0.6
 
 # Your Discord Webhook URL
 webhook_url = st.secrets["discord"]["webhook_url"]
