@@ -89,11 +89,11 @@ def generate_tarot_reading(tarot_draw, deck, language, context, draw_style, num_
     send_discord_message(webhook_url, f"A tarot draw started at {current_time}!\n {draw_style} \n{tarot_draw}, {deck}, {language} {gpt_model}, Temp: {gpt_temperature}")
     
     wordcount = 200 * num_cards
-    context_string = f"Consider my context for this reading: {context}" if context else ""
-    context_describe_string = f"""Your provided context "{context}" has been integrated into the reading.  
+    context_string = f"Reference my provided reading context: {context}" if context else ""
+    context_describe_string = f"""integrate this reading context. Be sensitive to the emotions/potential reactivity of the user. inform gently that context is considered with great care. Context: {context}.  
     """ if context else ""
     style_string = f"Consider the classical tarot deck for this reading: {deck}" if deck else ""
-    language_string = f"Consider the language style for this reading: {language}" if language else ""
+    language_string = f"important, for the entire output make sure this is worded and toned using {language}" if language else ""
     instruction_string = f"Instructions: Give me a warm and empathetic {draw_style} tarot reading based on these cards: {tarot_draw}. "
      
     
@@ -101,20 +101,23 @@ def generate_tarot_reading(tarot_draw, deck, language, context, draw_style, num_
     {instruction_string}
     {context_string}
     {style_string}
-    When providing the headings for each section, include the card and include the common simple description or name of the card. 
-    Interpret how these cards interact in the context of real life challenges and opportunities. Give me a {wordcount} word reading and format this using Markdown formatting. Use casual conversational tone using the top 2000 words in common use. 
-    {language_string}
     
-    Sample Structure:
-    # [{draw_style}] Reading
-    [Warm and brief introduction explaining the basics of {draw_style} and the purpose of the reading. This should be respectful that readers may be going through tough times and should be overly bright and chipper. do not use exclamation marks.]
-    {context_describe_string}
+    ## Instructions
+    Create the reading with a total of {wordcount} words. Follow the sample structure exactly. {language_string}. Use casual conversational gentle tone. 
 
-    # [Section Title] - [Card Name] - [card expressive name]
+    ## Tone, Style, and Language
+    Avoid white juju and overly positive language that is overly vague/shallow. Avoid self-help buzzwords. Instead of using words like "transformation" use "transmutation", instead of "manifest" make references to "taking action" Use a gentle, empathetic, and respectful tone. Avoid overly formal language.
+
+    ## Sample Structure:
+    ### [{draw_style}] Reading
+    [gentle 70 word introduction explaining the basics of {draw_style} and the purpose of the reading. {context_describe_string}. tone: respectful, warm, gentle, empathetic. avoid: greetings such as "hi there" or "hello there", excitement, overenthusiasm, chipper.]
+
+    # Your Reading [short simple expressive title based on reading and context if available]
+    ## [Section Title] - [Card Name] - [card expressive name]
     [Para 1]
     [Para 2]
     [Para 3]
-    # [Section Title] - [Card Name] - [card expressive name]
+    ## [Section Title] - [Card Name] - [card expressive name]
     [Para 1]
     [Para 2]
     [Para 3]
@@ -122,11 +125,10 @@ def generate_tarot_reading(tarot_draw, deck, language, context, draw_style, num_
     (continue for total sections)
  
     # Conclusion
-    [Conclusion paragraph]
-    [Overall reading interpretation ensuring application to real life challenges and mentioning the individual cards chosen {tarot_draw} and their place in the Thesis, Antithesis, synthesis structure.]
+    [Conclusion Paragraph - Overall reading interpretation ensuring application to Context ({context}). Mentioning tarot draw: {tarot_draw} and their interpretation in the {draw_style}.]
     [brief comment on the reading from the perspective of {deck} tarot deck and interpretation corpus.]
 
-
+    {language_string}
     """
     response = client.chat.completions.create(
         model=gpt_model,

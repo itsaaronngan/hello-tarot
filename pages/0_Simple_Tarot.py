@@ -27,7 +27,7 @@ from tarot_config import tarot_decks, language_styles, draw_tarot_cards, tarot_d
 
 # Initialize your API key using Streamlit secrets
 openai_api_key = st.secrets["openai"]["api_key"]
-version = 0.5
+version = "0.6 (10 Jun 24)"
 
 # Your Discord Webhook URL
 webhook_url = st.secrets["discord"]["webhook_url"]
@@ -37,38 +37,38 @@ client = OpenAI(api_key=openai_api_key)
 
 results = {}
 # List of tarot decks
-tarot_decks = [
-    "Rider-Waite-Smith Tarot",
-    "Thoth Tarot",
-    "Marseille Tarot",
-    "Lenormand Tarot",
-    "Wild Unknown Tarot",
-    "Shadowscapes Tarot",
-    "Golden Dawn Tarot"
-]
+# tarot_decks = [
+#     "Rider-Waite-Smith Tarot",
+#     "Thoth Tarot",
+#     "Marseille Tarot",
+#     "Lenormand Tarot",
+#     "Wild Unknown Tarot",
+#     "Shadowscapes Tarot",
+#     "Golden Dawn Tarot"
+# ]
 
 # List of English language styles
-language_styles = [
-    "plain english", "Aussie Slang English", 
-    "African American Vernacular English (AAVE)", "Indian English", 
-    "Singaporean English (Singlish)", "Caribbean English", "Canadian English", 
-    "Spanglish", "Semantic Activism", "Gender-neutral English", "Easy Read English",  
-    "Elder Speak", "Shakespearean English",
-]
+# language_styles = [
+#     "plain english", "Aussie Slang English", 
+#     "African American Vernacular English (AAVE)", "Indian English", 
+#     "Singaporean English (Singlish)", "Caribbean English", "Canadian English", 
+#     "Spanglish", "Semantic Activism", "Gender-neutral English", "Easy Read English",  
+#     "Elder Speak", "Shakespearean English",
+# ]
 
 # Tarot Cards Definitions
-major_arcana = [
-    "The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor",
-    "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit",
-    "Wheel of Fortune", "Justice", "The Hanged Man", "Death", "Temperance",
-    "The Devil", "The Tower", "The Star", "The Moon", "The Sun",
-    "Judgement", "The World"
-]
-suits = ["Cups", "Pentacles", "Swords", "Wands"]
-minor_arcana = [f"{rank} of {suit}" for suit in suits for rank in [
-    "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
-    "Page", "Knight", "Queen", "King"
-]]
+# major_arcana = [
+#     "The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor",
+#     "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit",
+#     "Wheel of Fortune", "Justice", "The Hanged Man", "Death", "Temperance",
+#     "The Devil", "The Tower", "The Star", "The Moon", "The Sun",
+#     "Judgement", "The World"
+# ]
+# suits = ["Cups", "Pentacles", "Swords", "Wands"]
+# minor_arcana = [f"{rank} of {suit}" for suit in suits for rank in [
+#     "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
+#     "Page", "Knight", "Queen", "King"
+# ]]
 # tarot_cards = major_arcana + minor_arcana
 
 def send_discord_message(webhook_url, message):
@@ -89,11 +89,11 @@ def generate_tarot_reading(tarot_draw, deck, language, context, draw_style, num_
     send_discord_message(webhook_url, f"A tarot draw started at {current_time}!\n {draw_style} \n{tarot_draw}, {deck}, {language} {gpt_model}, Temp: {gpt_temperature}")
     
     wordcount = 200 * num_cards
-    context_string = f"Consider my context for this reading: {context}" if context else ""
-    context_describe_string = f"""integrate this context and be sensitive to the emotions and or potential reactivity of the user. Let them know gently that their context has been considered with great care. Context: {context}.  
+    context_string = f"Reference my provided reading context: {context}" if context else ""
+    context_describe_string = f"""integrate this reading context. Be sensitive to the emotions/potential reactivity of the user. inform gently that context is considered with great care. Context: {context}.  
     """ if context else ""
     style_string = f"Consider the classical tarot deck for this reading: {deck}" if deck else ""
-    language_string = f"Consider the language style for this reading: {language}" if language else ""
+    language_string = f"important, for the entire output make sure this is worded and toned using {language}" if language else ""
     instruction_string = f"Instructions: Give me a warm and empathetic {draw_style} tarot reading based on these cards: {tarot_draw}. "
      
     
@@ -101,13 +101,16 @@ def generate_tarot_reading(tarot_draw, deck, language, context, draw_style, num_
     {instruction_string}
     {context_string}
     {style_string}
-    When providing the headings for each section, include the card and include the common simple description or name of the card. 
-    Interpret how these cards interact in the context of real life challenges and opportunities. Give me a {wordcount} word reading and format this using Markdown formatting. Use casual conversational tone using the top 2000 words in common use. 
-    {language_string}
     
-    Sample Structure:
+    ## Instructions
+    Create the reading with a total of {wordcount} words. Follow the sample structure exactly. {language_string}. Use casual conversational gentle tone. 
+
+    ## Tone, Style, and Language
+    Avoid white juju and overly positive language that is overly vague/shallow. Avoid self-help buzzwords. Instead of using words like "transformation" use "transmutation", instead of "manifest" make references to "taking action" Use a gentle, empathetic, and respectful tone. Avoid overly formal language.
+
+    ## Sample Structure:
     ### [{draw_style}] Reading
-    [gentle 100 word introduction explaining the basics of {draw_style} and the purpose of the reading. {context_describe_string}. tone: respectful, warm, gentle, empathetic. avoid: greetings such as "hi there" or "hello there", excitement, overenthusiasm, chipper.]
+    [gentle 70 word introduction explaining the basics of {draw_style} and the purpose of the reading. {context_describe_string}. tone: respectful, warm, gentle, empathetic. avoid: greetings such as "hi there" or "hello there", excitement, overenthusiasm, chipper.]
 
     # Your Reading [short simple expressive title based on reading and context if available]
     ## [Section Title] - [Card Name] - [card expressive name]
@@ -122,11 +125,10 @@ def generate_tarot_reading(tarot_draw, deck, language, context, draw_style, num_
     (continue for total sections)
  
     # Conclusion
-    [Conclusion paragraph]
-    [Overall reading interpretation ensuring application to real life challenges and mentioning the individual cards chosen {tarot_draw} and their place in the Thesis, Antithesis, synthesis structure.]
+    [Conclusion Paragraph - Overall reading interpretation ensuring application to Context ({context}). Mentioning tarot draw: {tarot_draw} and their interpretation in the {draw_style}.]
     [brief comment on the reading from the perspective of {deck} tarot deck and interpretation corpus.]
 
-
+    {language_string}
     """
     response = client.chat.completions.create(
         model=gpt_model,

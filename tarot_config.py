@@ -11,8 +11,8 @@ tarot_decks = [
 ]
 
 language_styles = [
-    "plain english", "Aussie English", 
-    "African American Vernacular English (AAVE)", "Indian English", 
+    "plain english", 
+    "African American Vernacular English (AAVE)", "General Semantics English", "E-Prime English", 
     "Singaporean English (Singlish)", "Caribbean English", "Canadian English", 
     "Spanglish", "Semantic Activism", "Gender-neutral English", "Easy Read English", "Shakespearean English",
 ]
