@@ -106,18 +106,18 @@ def generate_tarot_reading(tarot_draw, deck, language, context, draw_style, num_
     Create the reading with a total of {wordcount} words. Follow the sample structure exactly. {language_string}. Use casual conversational gentle tone. 
 
     ## Tone, Style, and Language
-    Avoid white juju and overly positive language that is overly vague/shallow. Avoid self-help buzzwords. Instead of using words like "transformation" use "transmutation", instead of "manifest" make references to "taking action" Use a gentle, empathetic, and respectful tone. Avoid overly formal language.
+    Avoid white juju and overly positive language that is overly vague/shallow. Avoid self-help buzzwords. Instead of using words like "transformation" use "transmutation", instead of "manifest" make references to "taking action" Use a gentle, empathetic, and respectful tone. Avoid overly formal language. If appropriate, reference the complexity inherant in life: e.g. happiness cannot be appreciated without sorrow.
 
     ## Sample Structure:
     ### [{draw_style}] Reading
     [gentle 70 word introduction explaining the basics of {draw_style} and the purpose of the reading. {context_describe_string}. tone: respectful, warm, gentle, empathetic. avoid: greetings such as "hi there" or "hello there", excitement, overenthusiasm, chipper.]
 
     # Your Reading [short simple expressive title based on reading and context if available]
-    ## [Section Title] - [Card Name] - [card expressive name]
+    ## [Section Title based on spread style] - [Card Name] - [card expressive name]
     [Para 1]
     [Para 2]
     [Para 3]
-    ## [Section Title] - [Card Name] - [card expressive name]
+    ## [Section Title based on spread style] - [Card Name] - [card expressive name]
     [Para 1]
     [Para 2]
     [Para 3]
@@ -220,7 +220,7 @@ if st.button("Generate Reading" if override_cards else "Draw Tarot Cards and Gen
                 # Generating {draw_style} 
                 ### Cards: {tarot_draw}
                 Your reading is being generated and will take 10-20 seconds.
-                                
+                Context: {context}                
                 """)
                 # Language: {language} and in the style of {style}
     gpt_model = "gpt-4o"
