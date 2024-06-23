@@ -22,7 +22,9 @@ import datetime
 import pytz
 from threading import Thread
 from tarot_config import tarot_decks, language_styles, draw_tarot_cards, tarot_draw_styles
-
+import pdfkit
+import base64
+from io import BytesIO
 
 
 # Initialize your API key using Streamlit secrets
@@ -247,6 +249,13 @@ if st.button("Generate Reading" if override_cards else "Draw Tarot Cards and Gen
     
     # Display the results
     st.markdown(output_text)
+
+    st.download_button(
+        label="Download .txt file Reading",
+        data=output_text,
+        file_name="tarot_reading.txt",
+        mime="text/plain",
+    )
 
     # Split the message if it's too long
     messages = split_messages(technical_info)
