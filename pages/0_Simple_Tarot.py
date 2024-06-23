@@ -22,9 +22,6 @@ import datetime
 import pytz
 from threading import Thread
 from tarot_config import tarot_decks, language_styles, draw_tarot_cards, tarot_draw_styles
-import pdfkit
-import base64
-from io import BytesIO
 
 
 # Initialize your API key using Streamlit secrets
