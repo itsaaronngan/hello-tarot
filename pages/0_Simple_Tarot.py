@@ -182,7 +182,7 @@ st.title(f"Simple Tarot Reading🔮")
 st.subheader(f"{draw_style} v{version}")
 
 # User inputs
-context = st.text_input("Optional attunement: Align this reading with your personal situation, context, or emotions", "")
+context = st.text_input("Optional attunement: Align this reading with your personal situation, context or emotions", "")
 num_cards = 3
 
 # Checkbox for showing advanced options
