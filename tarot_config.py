@@ -18,18 +18,18 @@ language_styles = [
 ]
 
 major_arcana = [
-    "The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor",
+    "The Magician", "The High Priestess", "The Empress", "The Emperor",
     "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit",
     "Wheel of Fortune", "Justice", "The Hanged Man", "Death", "Temperance",
-    "The Devil", "The Tower", "The Star", "The Moon", "The Sun",
+    "The Devil", "The Star", "The Moon", "The Sun",
     "Judgement", "The World"
 ]
 
 suits = ["Cups", "Pentacles", "Swords", "Wands"]
 
 minor_arcana = [f"{rank} of {suit}" for suit in suits for rank in [
-    "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
-    "Page", "Knight", "Queen", "King"
+    "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Nine", "Ten",
+    "Page", "King"
 ]]
 
 tarot_cards = major_arcana + minor_arcana
@@ -57,3 +57,21 @@ def draw_tarot_cards(num_cards=3):
     :return: List of drawn tarot cards
     """
     return random.sample(tarot_cards, num_cards)
+
+
+
+
+# full arcana
+# major_arcana = [
+  #  "The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor",
+  #  "The Hierophant", "The Lovers", "The Chariot", "Strength", "The Hermit",
+  #  "Wheel of Fortune", "Justice", "The Hanged Man", "Death", "Temperance",
+  #  "The Devil", "The Tower", "The Star", "The Moon", "The Sun",
+  #  "Judgement", "The World"
+# ]
+
+# suits = ["Cups", "Pentacles", "Swords", "Wands"]
+
+# minor_arcana = [f"{rank} of {suit}" for suit in suits for rank in [
+    "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
+    "Page", "Knight", "Queen", "King"

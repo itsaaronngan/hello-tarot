@@ -105,7 +105,7 @@ def generate_tarot_reading(tarot_draw, deck, language, context, draw_style, num_
     Create the reading with a total of {wordcount} words. Follow the sample structure exactly. {language_string}. Use casual conversational gentle tone. 
 
     ## Tone, Style, and Language
-    Avoid white juju and overly positive language that is overly vague/shallow. Avoid self-help buzzwords. Instead of using words like "transformation" use "transmutation", instead of "manifest" make references to "taking action" Use a gentle, empathetic, and respectful tone. Avoid overly formal language. If appropriate, reference the complexity inherant in life: e.g. happiness cannot be appreciated without sorrow.
+    Avoid white juju and overly positive language that is overly vague/shallow. Avoid self-help buzzwords. subtly and gently promote asking for help, and rest (but do not mention this as part of the 70 word introduction). Instead of using words like "transformation" use "transmutation", instead of "manifest" make references to "taking action" Use a gentle, empathetic, and respectful tone. Avoid overly formal language. If appropriate, reference the complexity inherant in life: e.g. happiness cannot be appreciated without sorrow.
 
     ## Sample Structure:
     ### [{draw_style}] Reading
