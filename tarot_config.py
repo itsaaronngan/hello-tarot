@@ -28,8 +28,8 @@ major_arcana = [
 suits = ["Cups", "Pentacles", "Swords", "Wands"]
 
 minor_arcana = [f"{rank} of {suit}" for suit in suits for rank in [
-    "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Nine", "Ten",
-    "Page", "King"
+    "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
+    "Page", "Queen", "King"
 ]]
 
 tarot_cards = major_arcana + minor_arcana
