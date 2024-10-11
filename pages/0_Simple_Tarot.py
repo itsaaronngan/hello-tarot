@@ -225,7 +225,7 @@ if st.button("Generate Reading" if override_cards else "Draw Tarot Cards and Gen
                 Note: Readings are now available via telegram bot allowing a more in depth (ChatGPT supported conversation) that can support you in engaging with your reading. https://t.me/threecardtgpttarot_bot
                 """)
                 # Language: {language} and in the style of {style}
-    gpt_model = "gpt-4o"
+    gpt_model = "gpt-4o-mini"
     gpt_temperature = 0.2
     # Generate tarot reading
 
