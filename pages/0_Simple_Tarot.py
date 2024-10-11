@@ -187,6 +187,8 @@ num_cards = 3
 
 # Checkbox for showing advanced options
 show_advanced_options = st.checkbox("Show advanced options")
+st.markdown("Engage with more in-depth readings via an interactive ChatGPT conversation enabled Telegram bot.")
+st.markdown("[🔮Telegram Tarot Bot - @threecardgpttarot_bot 🔮](https://t.me/threecardtgpttarot_bot)")
 
 # Default values for deck and language
 
@@ -220,6 +222,7 @@ if st.button("Generate Reading" if override_cards else "Draw Tarot Cards and Gen
                 ### Cards: {tarot_draw}
                 Your reading is being generated and will take 10-20 seconds.
                 Context: {context}                
+                Note: Readings are now available via telegram bot allowing a more in depth (ChatGPT supported conversation) that can support you in engaging with your reading. https://t.me/threecardtgpttarot_bot
                 """)
                 # Language: {language} and in the style of {style}
     gpt_model = "gpt-4o"
@@ -233,7 +236,7 @@ if st.button("Generate Reading" if override_cards else "Draw Tarot Cards and Gen
     output_text = f"Your Tarot Cards:{tarot_draw}, Draw Style: {draw_style} \n{tarot_reading}\n\n========End of Reading========\n"
 
     # Check if the user wants to see the technical info
-    technical_info = f"Version {version}, Draw Style: {draw_style}. Context: {context} ({', '.join(tarot_draw)})\nModel: {gpt_model} Temperature: {gpt_temperature} \nStyle: {deck} Language: {language}\n  Your Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n"
+    technical_info = f"Version {version}, Draw Style: {draw_style}. Context: {context} ({', '.join(tarot_draw)})\nModel: {gpt_model} Temperature: {gpt_temperature} \nStyle: {deck} Language: {language}\n  Your Tarot Cards:{tarot_draw}\n{tarot_reading}\n\n========End of Reading========\n Note: Readings are now available via telegram bot allowing a more in depth (ChatGPT supported conversation) that can support you in engaging with your reading. https://t.me/threecardtgpttarot_bot"
     
 
     # Send the output text to a Discord server
