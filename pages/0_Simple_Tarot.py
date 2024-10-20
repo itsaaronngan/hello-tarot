@@ -221,9 +221,9 @@ if st.button("Generate Reading" if override_cards else "Draw Tarot Cards and Gen
                 # Generating {draw_style} 
                 ### Cards: {tarot_draw}
                 Your reading is being generated and will take 10-20 seconds.
-                Context: {context}                
+                Context: {context}   \n             
                 Note: Readings are now available via telegram bot allowing a more in depth (ChatGPT supported conversation) that can support you in engaging with your reading. https://t.me/threecardtgpttarot_bot
-                """)
+                \n\n""")
                 # Language: {language} and in the style of {style}
     gpt_model = "gpt-4o-mini"
     gpt_temperature = 0.2
