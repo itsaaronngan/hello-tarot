@@ -85,7 +85,7 @@ def send_discord_message(webhook_url, message):
 def generate_tarot_reading(tarot_draw, deck, language, context, draw_style, num_cards):
     australia_timezone = pytz.timezone('Australia/Sydney')
     current_time = datetime.datetime.now(australia_timezone).strftime("%Y-%m-%d %H:%M:%S")
-    send_discord_message(webhook_url, f"A tarot draw started at {current_time}!\n {draw_style} \n{tarot_draw}, {deck}, {language} {gpt_model}, Temp: {gpt_temperature}")
+    send_discord_message(webhook_url, f"Streamlit: A tarot draw started at {current_time}!\n {draw_style} \n{tarot_draw}, {deck}, {language} {gpt_model}, Temp: {gpt_temperature}")
     
     wordcount = 200 * num_cards
     context_string = f"Reference my provided reading context: {context}" if context else ""
